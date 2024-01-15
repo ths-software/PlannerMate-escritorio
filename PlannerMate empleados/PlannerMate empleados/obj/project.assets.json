@@ -1,0 +1,233 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0-windows7.0": {
+      "MindFusion.Scheduling/5.8.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/MindFusion.Common.dll": {},
+          "lib/net6.0/MindFusion.Excel.dll": {},
+          "lib/net6.0/MindFusion.HolidayProviders.dll": {},
+          "lib/net6.0/MindFusion.Licensing.dll": {},
+          "lib/net6.0/MindFusion.Pdf.dll": {},
+          "lib/net6.0/MindFusion.Scheduling.Excel.dll": {
+            "related": ".xml"
+          },
+          "lib/net6.0/MindFusion.Scheduling.Pdf.dll": {
+            "related": ".xml"
+          },
+          "lib/net6.0/MindFusion.Scheduling.Reporting.dll": {
+            "related": ".xml"
+          },
+          "lib/net6.0/MindFusion.Scheduling.WinForms.StandardForms.dll": {
+            "related": ".xml"
+          },
+          "lib/net6.0/MindFusion.Scheduling.dll": {
+            "related": ".Excel.xml;.Outlook.xml;.Pdf.xml;.Reporting.xml;.WinForms.StandardForms.xml;.xml"
+          },
+          "lib/net6.0/MindFusion.Svg.dll": {},
+          "lib/net6.0/MindFusion.UI.WinForms.dll": {},
+          "lib/net6.0/MindFusion.Zip.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/MindFusion.Common.dll": {},
+          "lib/net6.0/MindFusion.Excel.dll": {},
+          "lib/net6.0/MindFusion.HolidayProviders.dll": {},
+          "lib/net6.0/MindFusion.Licensing.dll": {},
+          "lib/net6.0/MindFusion.Pdf.dll": {},
+          "lib/net6.0/MindFusion.Scheduling.Excel.dll": {
+            "related": ".xml"
+          },
+          "lib/net6.0/MindFusion.Scheduling.Pdf.dll": {
+            "related": ".xml"
+          },
+          "lib/net6.0/MindFusion.Scheduling.Reporting.dll": {
+            "related": ".xml"
+          },
+          "lib/net6.0/MindFusion.Scheduling.WinForms.StandardForms.dll": {
+            "related": ".xml"
+          },
+          "lib/net6.0/MindFusion.Scheduling.dll": {
+            "related": ".Excel.xml;.Outlook.xml;.Pdf.xml;.Reporting.xml;.WinForms.StandardForms.xml;.xml"
+          },
+          "lib/net6.0/MindFusion.Svg.dll": {},
+          "lib/net6.0/MindFusion.UI.WinForms.dll": {},
+          "lib/net6.0/MindFusion.Zip.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MindFusion.Scheduling/5.8.3": {
+      "sha512": "nEkqyoe/mkNdfE7y7/+U0LiODCihLgDvd8gma4jz2xaBfCvfqp6qoKcHN/cxDCb+A0RWvcdwQa9BK33h553OvA==",
+      "type": "package",
+      "path": "mindfusion.scheduling/5.8.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/Microsoft.Office.Interop.Outlook.dll",
+        "lib/net45/MindFusion.Common.dll",
+        "lib/net45/MindFusion.Excel.dll",
+        "lib/net45/MindFusion.HolidayProviders.dll",
+        "lib/net45/MindFusion.Licensing.dll",
+        "lib/net45/MindFusion.Pdf.dll",
+        "lib/net45/MindFusion.Scheduling.Excel.dll",
+        "lib/net45/MindFusion.Scheduling.Excel.xml",
+        "lib/net45/MindFusion.Scheduling.Outlook.dll",
+        "lib/net45/MindFusion.Scheduling.Outlook.xml",
+        "lib/net45/MindFusion.Scheduling.Pdf.dll",
+        "lib/net45/MindFusion.Scheduling.Pdf.xml",
+        "lib/net45/MindFusion.Scheduling.Reporting.dll",
+        "lib/net45/MindFusion.Scheduling.Reporting.xml",
+        "lib/net45/MindFusion.Scheduling.WinForms.StandardForms.dll",
+        "lib/net45/MindFusion.Scheduling.WinForms.StandardForms.xml",
+        "lib/net45/MindFusion.Scheduling.dll",
+        "lib/net45/MindFusion.Scheduling.xml",
+        "lib/net45/MindFusion.Svg.dll",
+        "lib/net45/MindFusion.UI.WinForms.dll",
+        "lib/net45/MindFusion.Zip.dll",
+        "lib/net45/Office.dll",
+        "lib/net5.0/Microsoft.Office.Interop.Outlook.dll",
+        "lib/net5.0/MindFusion.Common.dll",
+        "lib/net5.0/MindFusion.Excel.dll",
+        "lib/net5.0/MindFusion.HolidayProviders.dll",
+        "lib/net5.0/MindFusion.Licensing.dll",
+        "lib/net5.0/MindFusion.Pdf.dll",
+        "lib/net5.0/MindFusion.Scheduling.Excel.dll",
+        "lib/net5.0/MindFusion.Scheduling.Excel.xml",
+        "lib/net5.0/MindFusion.Scheduling.Outlook.dll",
+        "lib/net5.0/MindFusion.Scheduling.Outlook.xml",
+        "lib/net5.0/MindFusion.Scheduling.Pdf.dll",
+        "lib/net5.0/MindFusion.Scheduling.Pdf.xml",
+        "lib/net5.0/MindFusion.Scheduling.Reporting.dll",
+        "lib/net5.0/MindFusion.Scheduling.Reporting.xml",
+        "lib/net5.0/MindFusion.Scheduling.WinForms.StandardForms.dll",
+        "lib/net5.0/MindFusion.Scheduling.WinForms.StandardForms.xml",
+        "lib/net5.0/MindFusion.Scheduling.dll",
+        "lib/net5.0/MindFusion.Scheduling.xml",
+        "lib/net5.0/MindFusion.Svg.dll",
+        "lib/net5.0/MindFusion.UI.WinForms.dll",
+        "lib/net5.0/MindFusion.Zip.dll",
+        "lib/net5.0/Office.dll",
+        "lib/net6.0/Microsoft.Office.Interop.Outlook.dll",
+        "lib/net6.0/MindFusion.Common.dll",
+        "lib/net6.0/MindFusion.Excel.dll",
+        "lib/net6.0/MindFusion.HolidayProviders.dll",
+        "lib/net6.0/MindFusion.Licensing.dll",
+        "lib/net6.0/MindFusion.Pdf.dll",
+        "lib/net6.0/MindFusion.Scheduling.Excel.dll",
+        "lib/net6.0/MindFusion.Scheduling.Excel.xml",
+        "lib/net6.0/MindFusion.Scheduling.Outlook.dll",
+        "lib/net6.0/MindFusion.Scheduling.Outlook.xml",
+        "lib/net6.0/MindFusion.Scheduling.Pdf.dll",
+        "lib/net6.0/MindFusion.Scheduling.Pdf.xml",
+        "lib/net6.0/MindFusion.Scheduling.Reporting.dll",
+        "lib/net6.0/MindFusion.Scheduling.Reporting.xml",
+        "lib/net6.0/MindFusion.Scheduling.WinForms.StandardForms.dll",
+        "lib/net6.0/MindFusion.Scheduling.WinForms.StandardForms.xml",
+        "lib/net6.0/MindFusion.Scheduling.dll",
+        "lib/net6.0/MindFusion.Scheduling.xml",
+        "lib/net6.0/MindFusion.Svg.dll",
+        "lib/net6.0/MindFusion.UI.WinForms.dll",
+        "lib/net6.0/MindFusion.Zip.dll",
+        "lib/net6.0/Office.dll",
+        "lib/netcoreapp3.0/Microsoft.Office.Interop.Outlook.dll",
+        "lib/netcoreapp3.0/MindFusion.Common.dll",
+        "lib/netcoreapp3.0/MindFusion.Excel.dll",
+        "lib/netcoreapp3.0/MindFusion.HolidayProviders.dll",
+        "lib/netcoreapp3.0/MindFusion.Licensing.dll",
+        "lib/netcoreapp3.0/MindFusion.Pdf.dll",
+        "lib/netcoreapp3.0/MindFusion.Scheduling.Excel.dll",
+        "lib/netcoreapp3.0/MindFusion.Scheduling.Excel.xml",
+        "lib/netcoreapp3.0/MindFusion.Scheduling.Outlook.dll",
+        "lib/netcoreapp3.0/MindFusion.Scheduling.Outlook.xml",
+        "lib/netcoreapp3.0/MindFusion.Scheduling.Pdf.dll",
+        "lib/netcoreapp3.0/MindFusion.Scheduling.Pdf.xml",
+        "lib/netcoreapp3.0/MindFusion.Scheduling.Reporting.dll",
+        "lib/netcoreapp3.0/MindFusion.Scheduling.Reporting.xml",
+        "lib/netcoreapp3.0/MindFusion.Scheduling.WinForms.StandardForms.dll",
+        "lib/netcoreapp3.0/MindFusion.Scheduling.WinForms.StandardForms.xml",
+        "lib/netcoreapp3.0/MindFusion.Scheduling.dll",
+        "lib/netcoreapp3.0/MindFusion.Scheduling.xml",
+        "lib/netcoreapp3.0/MindFusion.Svg.dll",
+        "lib/netcoreapp3.0/MindFusion.UI.WinForms.dll",
+        "lib/netcoreapp3.0/MindFusion.Zip.dll",
+        "lib/netcoreapp3.0/Office.dll",
+        "mindfusion.scheduling.5.8.3.nupkg.sha512",
+        "mindfusion.scheduling.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0-windows7.0": [
+      "MindFusion.Scheduling >= 5.8.3"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\alumno\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\alumno\\Documents\\Asignaturas\\X. proyecto final\\DAM-ProyectoFinal-Desktop\\PlannerMate empleados\\PlannerMate empleados\\PlannerMate empleados.csproj",
+      "projectName": "PlannerMate empleados",
+      "projectPath": "C:\\Users\\alumno\\Documents\\Asignaturas\\X. proyecto final\\DAM-ProyectoFinal-Desktop\\PlannerMate empleados\\PlannerMate empleados\\PlannerMate empleados.csproj",
+      "packagesPath": "C:\\Users\\alumno\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\alumno\\Documents\\Asignaturas\\X. proyecto final\\DAM-ProyectoFinal-Desktop\\PlannerMate empleados\\PlannerMate empleados\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\alumno\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0-windows"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0-windows7.0": {
+          "targetAlias": "net6.0-windows",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0-windows7.0": {
+        "targetAlias": "net6.0-windows",
+        "dependencies": {
+          "MindFusion.Scheduling": {
+            "target": "Package",
+            "version": "[5.8.3, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WPF": {
+            "privateAssets": "none"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

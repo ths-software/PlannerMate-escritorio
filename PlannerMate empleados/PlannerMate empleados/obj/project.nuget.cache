@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "uVlRfQzfzVbG+0kgguVIrZZ0n7+fSPXLzZOROfSLlIgBBGeQo44kT5BrNPKS3OvGh0qHQ7PJv0hHqLQ9aqEtqQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\alumno\\Documents\\Asignaturas\\X. proyecto final\\DAM-ProyectoFinal-Desktop\\PlannerMate empleados\\PlannerMate empleados\\PlannerMate empleados.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\alumno\\.nuget\\packages\\mindfusion.scheduling\\5.8.3\\mindfusion.scheduling.5.8.3.nupkg.sha512"
+  ],
+  "logs": []
+}
