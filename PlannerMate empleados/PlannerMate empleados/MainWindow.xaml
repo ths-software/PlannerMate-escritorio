@@ -40,12 +40,13 @@
     </Window.Resources>
 
     <!-- El contenedor principal es un borde con un fondo, bordes redondeados -->
+
     <Border  BorderBrush="Black" CornerRadius="7" BorderThickness="1" Background="#FFD8D8D8">
         <DockPanel LastChildFill="False">
             <!-- Barra de Título Personalizada -->
 
             <Grid DockPanel.Dock="Top" Height="40"
-                    MouseDown="DragWindow" MouseMove="MoveWindow" MouseUp="ReleaseWindow">
+                MouseDown="DragWindow" MouseMove="MoveWindow" MouseUp="ReleaseWindow">
 
                 <!-- Border para los corner redonditos (sujeto a posible cambio) -->
                 <!--    Quitar, dejar el contenido dentro del grid y cambiar color de grid -->
@@ -55,15 +56,15 @@
                     <!-- Contenido de la Barra de Título -->
                     <DockPanel>
                         <TextBlock DockPanel.Dock="Left" Text="Planner mate! (Empleados)"
-                                   VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,0,0,0" Foreground="White"/>
+                               VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,0,0,0" Foreground="White"/>
 
                         <!-- Botón de Cerrar -->
                         <Button DockPanel.Dock="Right" Content="X" HorizontalAlignment="Right" VerticalAlignment="Center" Width="25" Height="25"
-                                Click="CloseButton_Click" Foreground="Black" Margin="0,0,10,0"/>
+                            Click="CloseButton_Click" Foreground="Black" Margin="0,0,10,0"/>
 
                         <!-- Botón de Minimizar -->
                         <Button DockPanel.Dock="Right" Content="_" HorizontalAlignment="Right" VerticalAlignment="Center" Width="25" Height="25"
-                                Click="MinimizeButton_Click" Foreground="Black" Margin="0,0,5,0"/>
+                            Click="MinimizeButton_Click" Foreground="Black" Margin="0,0,5,0"/>
 
                         <!-- Los botones los quitaremos de la barra. -->
 
@@ -74,8 +75,14 @@
                 <Button  Content="1" Style="{StaticResource ResourceKey=CircularButtonStyle}"/>
                 <Button  Content="2" Style="{StaticResource ResourceKey=CircularButtonStyle}"/>
             </StackPanel>
-            
+
+
+
         </DockPanel>
+        
+        
+
     </Border>
+
 
 </Window>
