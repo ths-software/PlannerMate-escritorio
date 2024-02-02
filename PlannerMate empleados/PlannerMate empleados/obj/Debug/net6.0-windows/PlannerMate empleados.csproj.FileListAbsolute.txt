@@ -38,20 +38,6 @@ C:\Users\alumno\Documents\Asignaturas\X. proyecto final\DAM-ProyectoFinal-Deskto
 C:\Users\alumno\Documents\Asignaturas\X. proyecto final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\bin\Debug\net6.0-windows\PlannerMate empleados.runtimeconfig.json
 C:\Users\alumno\Documents\Asignaturas\X. proyecto final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\bin\Debug\net6.0-windows\PlannerMate empleados.dll
 C:\Users\alumno\Documents\Asignaturas\X. proyecto final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\bin\Debug\net6.0-windows\PlannerMate empleados.pdb
-C:\Users\alumno\Documents\Asignaturas\X. proyecto final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\bin\Debug\net6.0-windows\MindFusion.Common.dll
-C:\Users\alumno\Documents\Asignaturas\X. proyecto final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\bin\Debug\net6.0-windows\MindFusion.Excel.dll
-C:\Users\alumno\Documents\Asignaturas\X. proyecto final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\bin\Debug\net6.0-windows\MindFusion.HolidayProviders.dll
-C:\Users\alumno\Documents\Asignaturas\X. proyecto final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\bin\Debug\net6.0-windows\MindFusion.Licensing.dll
-C:\Users\alumno\Documents\Asignaturas\X. proyecto final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\bin\Debug\net6.0-windows\MindFusion.Pdf.dll
-C:\Users\alumno\Documents\Asignaturas\X. proyecto final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\bin\Debug\net6.0-windows\MindFusion.Scheduling.Excel.dll
-C:\Users\alumno\Documents\Asignaturas\X. proyecto final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\bin\Debug\net6.0-windows\MindFusion.Scheduling.Pdf.dll
-C:\Users\alumno\Documents\Asignaturas\X. proyecto final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\bin\Debug\net6.0-windows\MindFusion.Scheduling.Reporting.dll
-C:\Users\alumno\Documents\Asignaturas\X. proyecto final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\bin\Debug\net6.0-windows\MindFusion.Scheduling.WinForms.StandardForms.dll
-C:\Users\alumno\Documents\Asignaturas\X. proyecto final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\bin\Debug\net6.0-windows\MindFusion.Scheduling.dll
-C:\Users\alumno\Documents\Asignaturas\X. proyecto final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\bin\Debug\net6.0-windows\MindFusion.Svg.dll
-C:\Users\alumno\Documents\Asignaturas\X. proyecto final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\bin\Debug\net6.0-windows\MindFusion.UI.WinForms.dll
-C:\Users\alumno\Documents\Asignaturas\X. proyecto final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\bin\Debug\net6.0-windows\MindFusion.Zip.dll
-C:\Users\alumno\Documents\Asignaturas\X. proyecto final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Debug\net6.0-windows\PlannerMate empleados.csproj.AssemblyReference.cache
 C:\Users\alumno\Documents\Asignaturas\X. proyecto final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Debug\net6.0-windows\MainWindow.g.cs
 C:\Users\alumno\Documents\Asignaturas\X. proyecto final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Debug\net6.0-windows\App.g.cs
 C:\Users\alumno\Documents\Asignaturas\X. proyecto final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Debug\net6.0-windows\PlannerMate empleados_MarkupCompile.cache
@@ -62,10 +48,14 @@ C:\Users\alumno\Documents\Asignaturas\X. proyecto final\DAM-ProyectoFinal-Deskto
 C:\Users\alumno\Documents\Asignaturas\X. proyecto final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Debug\net6.0-windows\PlannerMate empleados.AssemblyInfoInputs.cache
 C:\Users\alumno\Documents\Asignaturas\X. proyecto final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Debug\net6.0-windows\PlannerMate empleados.AssemblyInfo.cs
 C:\Users\alumno\Documents\Asignaturas\X. proyecto final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Debug\net6.0-windows\PlannerMate empleados.csproj.CoreCompileInputs.cache
-C:\Users\alumno\Documents\Asignaturas\X. proyecto final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Debug\net6.0-windows\PlannerMate empleados.csproj.CopyComplete
 C:\Users\alumno\Documents\Asignaturas\X. proyecto final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Debug\net6.0-windows\PlannerMate empleados.dll
 C:\Users\alumno\Documents\Asignaturas\X. proyecto final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Debug\net6.0-windows\refint\PlannerMate empleados.dll
 C:\Users\alumno\Documents\Asignaturas\X. proyecto final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Debug\net6.0-windows\PlannerMate empleados.pdb
 C:\Users\alumno\Documents\Asignaturas\X. proyecto final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Debug\net6.0-windows\PlannerMate empleados.genruntimeconfig.cache
 C:\Users\alumno\Documents\Asignaturas\X. proyecto final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Debug\net6.0-windows\ref\PlannerMate empleados.dll
 C:\Users\alumno\Documents\Asignaturas\X. proyecto final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\alumno\Documents\Asignaturas\X. proyecto final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\bin\Debug\net6.0-windows\CommunityToolkit.Mvvm.dll
+C:\Users\alumno\Documents\Asignaturas\X. proyecto final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Debug\net6.0-windows\PlannerMate empleados.csproj.AssemblyReference.cache
+C:\Users\alumno\Documents\Asignaturas\X. proyecto final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Debug\net6.0-windows\Windows\Calendario.g.cs
+C:\Users\alumno\Documents\Asignaturas\X. proyecto final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Debug\net6.0-windows\Windows\Calendario.baml
+C:\Users\alumno\Documents\Asignaturas\X. proyecto final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Debug\net6.0-windows\PlannerMate empleados.csproj.CopyComplete

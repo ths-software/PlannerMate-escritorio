@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "PBQyo1DC06yhaw9L1FtXUyWDO1hzrQrdGPUs9nIz4QCiqSnjQi3syHpQQIJGKHmkvjq5J+W8h9iaOs0j5m+x/Q==",
+  "dgSpecHash": "GMxgUnGOJsdKv2BbBqFn/qXI5BOXPFWMsvQ3tuIt1rKcfW9kgJj1vnYItR1cZUXsyLWxbHSyNNYyfHnpdXr/8Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\alumno\\Documents\\Asignaturas\\X. proyecto final\\DAM-ProyectoFinal-Desktop\\PlannerMate empleados\\PlannerMate empleados\\PlannerMate empleados.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\alumno\\.nuget\\packages\\communitytoolkit.mvvm\\8.2.2\\communitytoolkit.mvvm.8.2.2.nupkg.sha512"
+  ],
   "logs": []
 }

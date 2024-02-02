@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PlannerMate_empleados.VMs;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,8 +21,12 @@ namespace PlannerMate_empleados
     /// </summary>
     public partial class MainWindow : Window
     {
+        MainWindowVM vm;
         public MainWindow()
         {
+            vm = new MainWindowVM();
+            this.DataContext = vm;
+            vm.CargarCalendario();
             InitializeComponent();
         }
 

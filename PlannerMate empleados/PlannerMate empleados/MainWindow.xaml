@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PlannerMate_empleados"
+
         xmlns:tools="clr-namespace:MyApp.Tools"
         mc:Ignorable="d"
         Height="{Binding Source={x:Static SystemParameters.PrimaryScreenHeight}, Converter={tools:RatioConverter}, ConverterParameter='0.8' }"
@@ -13,7 +14,6 @@
         AllowsTransparency="True" Background="Transparent">
 
     <!-- Tendremos el fondo transparente para modificar la vista de la ventana -->
-    <!-- Añadimos la librería mindfusion (?)-->
 
     <Window.Resources>
 
@@ -41,8 +41,8 @@
 
     <!-- El contenedor principal es un borde con un fondo, bordes redondeados -->
 
-    <Border  BorderBrush="Black" CornerRadius="7" BorderThickness="1" Background="#FFD8D8D8">
-        <DockPanel LastChildFill="False">
+    <Border  BorderBrush="Black" CornerRadius="7" BorderThickness="1" Background="#FFC3C3C3">
+        <DockPanel LastChildFill="True" >
             <!-- Barra de Título Personalizada -->
 
             <Grid DockPanel.Dock="Top" Height="40"
@@ -50,7 +50,7 @@
 
                 <!-- Border para los corner redonditos (sujeto a posible cambio) -->
                 <!--    Quitar, dejar el contenido dentro del grid y cambiar color de grid -->
-                <Border Background="#007ACC" CornerRadius="7,7,0,0">
+                <Border Background="#FF41426D" CornerRadius="7,7,0,0">
 
 
                     <!-- Contenido de la Barra de Título -->
@@ -75,6 +75,12 @@
                 <Button  Content="1" Style="{StaticResource ResourceKey=CircularButtonStyle}"/>
                 <Button  Content="2" Style="{StaticResource ResourceKey=CircularButtonStyle}"/>
             </StackPanel>
+            <Border BorderBrush="Black" BorderThickness="1" CornerRadius="7"
+                    Width="{Binding Source={x:Static SystemParameters.PrimaryScreenHeight}, Converter={tools:RatioConverter}, ConverterParameter='1.3' }"
+                    Height="{Binding Source={x:Static SystemParameters.PrimaryScreenHeight}, Converter={tools:RatioConverter}, ConverterParameter='0.65' }" Background="#FFD2D2D2"
+                    >
+                <ContentControl Content="{Binding Path=ContenidoCalendario }"></ContentControl>
+            </Border>
 
 
 
