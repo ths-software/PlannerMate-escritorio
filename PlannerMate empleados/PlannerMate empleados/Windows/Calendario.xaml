@@ -6,5 +6,109 @@
              xmlns:local="clr-namespace:PlannerMate_empleados.Windows"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <StackPanel Background="Red"/>
+
+    <UserControl.Resources>
+
+        <Style TargetType="Border" x:Key="resaltarDiaActual">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding DiaActual}" Value="True">
+                    <Setter Property="Background" Value="Yellow"/>
+                    <!-- Cambiar a tu color de resaltado preferido -->
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+
+        <DataTemplate x:Key="DayTemplate">
+            <Border Height="100" BorderBrush="Black" BorderThickness="1">
+                
+                <Border.InputBindings>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding DataContext.SelectDayCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}" CommandParameter="{Binding}"/>
+                </Border.InputBindings>
+
+                <DockPanel LastChildFill="False">
+                    <Border x:Name="TitleDay" DockPanel.Dock="Top" Style="{StaticResource resaltarDiaActual}">
+                        <TextBlock Text="{Binding}" HorizontalAlignment="Center"/>
+                    </Border>
+                </DockPanel>
+
+            </Border>
+            
+        </DataTemplate>
+
+        <Style TargetType="Border" x:Key="diasCelds">
+
+        </Style>
+
+        
+        
+    </UserControl.Resources>
+
+    <DockPanel LastChildFill="True">
+        <Border DockPanel.Dock="top" Height="30">
+            <!-- Month/Year header -->
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Button Command="{Binding Path=AtrasarMesCommand}" Content="&lt;" Height="25" Width="25"></Button>
+                <TextBlock Width="100" TextAlignment="Center" Text="{Binding DisplayedMonthYear}" />
+                <Button Command="{Binding Path=AdelantarMesCommand}" Content=">" Height="25" Width="25"></Button>
+            </StackPanel>
+        </Border>
+        
+        <Border DockPanel.Dock="Top" Height="20">
+            <UniformGrid Rows="1" Columns="7">
+                <Border Style="{StaticResource diasCelds}" BorderBrush="Black" BorderThickness="1">
+                    <TextBlock Text="Lunes" />
+                </Border>
+                <Border Style="{StaticResource diasCelds}" BorderBrush="Black" BorderThickness="1">
+                    <TextBlock Text="Martes" />
+                </Border>
+                <Border Style="{StaticResource diasCelds}" BorderBrush="Black" BorderThickness="1">
+                    <TextBlock Text="Miercoles" />
+                </Border>
+                <Border Style="{StaticResource diasCelds}" BorderBrush="Black" BorderThickness="1">
+                    <TextBlock Text="Jueves" />
+                </Border>
+                <Border Style="{StaticResource diasCelds}" BorderBrush="Black" BorderThickness="1">
+                    <TextBlock Text="Viernes" />
+                </Border>
+                <Border Style="{StaticResource diasCelds}" BorderBrush="Black" BorderThickness="1">
+                    <TextBlock Text="Sabado" />
+                </Border>
+                <Border Style="{StaticResource diasCelds}" BorderBrush="Black" BorderThickness="1">
+                    <TextBlock Text="Domingo" />
+                </Border>
+            </UniformGrid>
+        </Border>
+        <Border Background="#FFE2E2E2" >
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <!-- Add more column definitions if needed for day names, etc. -->
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <!-- Add more row definitions if needed for month/year header, etc. -->
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+
+
+                <!-- Calendar grid -->
+                <ItemsControl x:Name="CalendarItemsControl" ItemsSource="{Binding Days}" ItemTemplate="{StaticResource DayTemplate}">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <UniformGrid Rows="6" Columns="7"/>
+                            <!-- 6 rows, 7 columns for the days -->
+                        </ItemsPanelTemplate>
+                        
+                    </ItemsControl.ItemsPanel>
+
+
+                    
+                </ItemsControl>
+                
+            </Grid>
+        </Border>
+    </DockPanel>
+
 </UserControl>

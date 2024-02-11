@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "GMxgUnGOJsdKv2BbBqFn/qXI5BOXPFWMsvQ3tuIt1rKcfW9kgJj1vnYItR1cZUXsyLWxbHSyNNYyfHnpdXr/8Q==",
+  "dgSpecHash": "Dh3K3pBC9I6/dPjS8wX+sDWGUmcCx+5GX8rFdJW4kLGH2M3wIG+lSyi7Bc8L081IdxAh8A4IXwE858EfOpISUA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\alumno\\Documents\\Asignaturas\\X. proyecto final\\DAM-ProyectoFinal-Desktop\\PlannerMate empleados\\PlannerMate empleados\\PlannerMate empleados.csproj",
+  "projectFilePath": "C:\\Users\\andun\\OneDrive - Conselleria d'Educació\\Asignaturas\\2DAM\\X.Proyecto Final\\DAM-ProyectoFinal-Desktop\\PlannerMate empleados\\PlannerMate empleados\\PlannerMate empleados.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\alumno\\.nuget\\packages\\communitytoolkit.mvvm\\8.2.2\\communitytoolkit.mvvm.8.2.2.nupkg.sha512"
+    "C:\\Users\\andun\\.nuget\\packages\\communitytoolkit.mvvm\\8.2.2\\communitytoolkit.mvvm.8.2.2.nupkg.sha512"
   ],
   "logs": []
 }

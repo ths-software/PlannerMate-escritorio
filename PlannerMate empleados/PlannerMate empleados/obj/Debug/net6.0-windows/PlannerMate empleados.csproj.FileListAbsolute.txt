@@ -18,19 +18,6 @@ C:\Users\andun\OneDrive - Conselleria d'Educació\Asignaturas\2DAM\X.Proyecto Fi
 C:\Users\andun\OneDrive - Conselleria d'Educació\Asignaturas\2DAM\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Debug\net6.0-windows\PlannerMate empleados.pdb
 C:\Users\andun\OneDrive - Conselleria d'Educació\Asignaturas\2DAM\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Debug\net6.0-windows\PlannerMate empleados.genruntimeconfig.cache
 C:\Users\andun\OneDrive - Conselleria d'Educació\Asignaturas\2DAM\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Debug\net6.0-windows\ref\PlannerMate empleados.dll
-C:\Users\andun\OneDrive - Conselleria d'Educació\Asignaturas\2DAM\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\bin\Debug\net6.0-windows\MindFusion.Common.dll
-C:\Users\andun\OneDrive - Conselleria d'Educació\Asignaturas\2DAM\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\bin\Debug\net6.0-windows\MindFusion.Excel.dll
-C:\Users\andun\OneDrive - Conselleria d'Educació\Asignaturas\2DAM\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\bin\Debug\net6.0-windows\MindFusion.HolidayProviders.dll
-C:\Users\andun\OneDrive - Conselleria d'Educació\Asignaturas\2DAM\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\bin\Debug\net6.0-windows\MindFusion.Licensing.dll
-C:\Users\andun\OneDrive - Conselleria d'Educació\Asignaturas\2DAM\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\bin\Debug\net6.0-windows\MindFusion.Pdf.dll
-C:\Users\andun\OneDrive - Conselleria d'Educació\Asignaturas\2DAM\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\bin\Debug\net6.0-windows\MindFusion.Scheduling.Excel.dll
-C:\Users\andun\OneDrive - Conselleria d'Educació\Asignaturas\2DAM\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\bin\Debug\net6.0-windows\MindFusion.Scheduling.Pdf.dll
-C:\Users\andun\OneDrive - Conselleria d'Educació\Asignaturas\2DAM\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\bin\Debug\net6.0-windows\MindFusion.Scheduling.Reporting.dll
-C:\Users\andun\OneDrive - Conselleria d'Educació\Asignaturas\2DAM\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\bin\Debug\net6.0-windows\MindFusion.Scheduling.WinForms.StandardForms.dll
-C:\Users\andun\OneDrive - Conselleria d'Educació\Asignaturas\2DAM\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\bin\Debug\net6.0-windows\MindFusion.Scheduling.dll
-C:\Users\andun\OneDrive - Conselleria d'Educació\Asignaturas\2DAM\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\bin\Debug\net6.0-windows\MindFusion.Svg.dll
-C:\Users\andun\OneDrive - Conselleria d'Educació\Asignaturas\2DAM\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\bin\Debug\net6.0-windows\MindFusion.UI.WinForms.dll
-C:\Users\andun\OneDrive - Conselleria d'Educació\Asignaturas\2DAM\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\bin\Debug\net6.0-windows\MindFusion.Zip.dll
 C:\Users\andun\OneDrive - Conselleria d'Educació\Asignaturas\2DAM\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Debug\net6.0-windows\PlannerMate empleados.csproj.AssemblyReference.cache
 C:\Users\andun\OneDrive - Conselleria d'Educació\Asignaturas\2DAM\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Debug\net6.0-windows\PlannerMate empleados.csproj.CopyComplete
 C:\Users\alumno\Documents\Asignaturas\X. proyecto final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\bin\Debug\net6.0-windows\PlannerMate empleados.exe
@@ -59,3 +46,7 @@ C:\Users\alumno\Documents\Asignaturas\X. proyecto final\DAM-ProyectoFinal-Deskto
 C:\Users\alumno\Documents\Asignaturas\X. proyecto final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Debug\net6.0-windows\Windows\Calendario.g.cs
 C:\Users\alumno\Documents\Asignaturas\X. proyecto final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Debug\net6.0-windows\Windows\Calendario.baml
 C:\Users\alumno\Documents\Asignaturas\X. proyecto final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Debug\net6.0-windows\PlannerMate empleados.csproj.CopyComplete
+C:\Users\andun\OneDrive - Conselleria d'Educació\Asignaturas\2DAM\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\bin\Debug\net6.0-windows\CommunityToolkit.Mvvm.dll
+C:\Users\andun\OneDrive - Conselleria d'Educació\Asignaturas\2DAM\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Debug\net6.0-windows\Windows\Calendario.g.cs
+C:\Users\andun\OneDrive - Conselleria d'Educació\Asignaturas\2DAM\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\andun\OneDrive - Conselleria d'Educació\Asignaturas\2DAM\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Debug\net6.0-windows\Windows\Calendario.baml

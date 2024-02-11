@@ -1,5 +1,8 @@
-﻿using System;
+﻿using PlannerMate_empleados.VMs;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,13 +18,14 @@ using System.Windows.Shapes;
 
 namespace PlannerMate_empleados.Windows
 {
-    /// <summary>
-    /// Lógica de interacción para Calendario.xaml
-    /// </summary>
     public partial class Calendario : UserControl
     {
+
+        CalendarioVM vm;
         public Calendario()
         {
+            vm = new CalendarioVM();
+            this.DataContext = vm;
             InitializeComponent();
         }
     }
