@@ -19,7 +19,7 @@
         </Style>
 
         <DataTemplate x:Key="DayTemplate">
-            <Border Height="100" BorderBrush="Black" BorderThickness="1">
+            <Border Height="100" Background="white" BorderBrush="Black" BorderThickness="1">
                 
                 <Border.InputBindings>
                     <MouseBinding Gesture="LeftClick" Command="{Binding DataContext.SelectDayCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}" CommandParameter="{Binding}"/>
