@@ -1,4 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 using PlannerMate_empleados.Services;
 using System;
 using System.Collections.Generic;
@@ -12,17 +13,30 @@ namespace PlannerMate_empleados.VMs
 {
     class MainWindowVM : ObservableObject
     {
-        private UserControl contenidoCalendario;
-        public UserControl ContenidoCalendario
+        private UserControl contenidoPrincipal;
+
+
+        public RelayCommand AbrirCalendario;
+
+
+        public UserControl ContenidoPrincipal
         {
-            get { return contenidoCalendario; }
-            set => SetProperty(ref contenidoCalendario, value);
+            get { return contenidoPrincipal; }
+            set => SetProperty(ref contenidoPrincipal, value);
         }
+
+        public MainWindowVM()
+        {
+
+            AbrirCalendario = new RelayCommand(CargarCalendario);
+        }
+
+
 
 
         public void CargarCalendario()
         {
-            ContenidoCalendario = NavigationServices.LoadCalendario();
+            ContenidoPrincipal = NavigationServices.LoadCalendario();
         }
     }
 }

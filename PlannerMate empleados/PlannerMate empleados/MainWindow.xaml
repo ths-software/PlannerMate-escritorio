@@ -17,13 +17,13 @@
 
     <Window.Resources>
 
-        <Style x:Key="CircularButtonStyle" TargetType="Button">
-            <Setter Property="Width" Value="35"/>
-            <Setter Property="Height" Value="35"/>
+        <Style x:Key="CircularButtonStyle" TargetType="{x:Type Button}">
+            <Setter Property="Width" Value="43"/>
+            <Setter Property="Height" Value="43"/>
             <Setter Property="Background" Value="White"/>
             <Setter Property="BorderBrush" Value="Black"/>
             <Setter Property="BorderThickness" Value="1"/>
-
+            <Setter Property="Margin" Value="0,0,0,14"></Setter>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
@@ -35,23 +35,32 @@
                 </Setter.Value>
             </Setter>
 
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#FFC1C1C1"/>
+                </Trigger>
+            </Style.Triggers>
+
         </Style>
 
     </Window.Resources>
 
     <!-- El contenedor principal es un borde con un fondo, bordes redondeados -->
 
-    <Border  BorderBrush="Black" CornerRadius="7" BorderThickness="1" Background="#FFC3C3C3">
+    <Border  BorderBrush="Black" CornerRadius="15" BorderThickness="1" Background="#FFC3C3C3">
         <DockPanel LastChildFill="True" >
             <!-- Barra de Título Personalizada -->
 
-            <Grid DockPanel.Dock="Top" Height="40"
+            <Grid DockPanel.Dock="Top" Height="35"
                 MouseDown="DragWindow" MouseMove="MoveWindow" MouseUp="ReleaseWindow">
 
                 <!-- Border para los corner redonditos (sujeto a posible cambio) -->
                 <!--    Quitar, dejar el contenido dentro del grid y cambiar color de grid -->
-                <Border Background="#FF41426D" CornerRadius="7,7,0,0">
-
+                <Border Background="#FF41426D" CornerRadius="14,14,0,0" BorderThickness="0,0,0,1" BorderBrush="Black">
+                    <Border.Effect>
+                        <DropShadowEffect Color="Black" Direction="270" ShadowDepth="5" Opacity="0.2
+"/>
+                    </Border.Effect>
 
                     <!-- Contenido de la Barra de Título -->
                     <DockPanel>
@@ -60,33 +69,68 @@
 
                         <!-- Botón de Cerrar -->
                         <Button DockPanel.Dock="Right" Content="X" HorizontalAlignment="Right" VerticalAlignment="Center" Width="25" Height="25"
-                            Click="CloseButton_Click" Foreground="Black" Margin="0,0,10,0"/>
+                            Click="CloseButton_Click" Foreground="White" Margin="0,0,20,0" Background="#00DDDDDD" BorderBrush="Black"/>
 
                         <!-- Botón de Minimizar -->
                         <Button DockPanel.Dock="Right" Content="_" HorizontalAlignment="Right" VerticalAlignment="Center" Width="25" Height="25"
-                            Click="MinimizeButton_Click" Foreground="Black" Margin="0,0,5,0"/>
+                            Click="MinimizeButton_Click" Foreground="White" Margin="0,0,5,0" Background="#00DDDDDD" BorderBrush="Black"/>
 
                         <!-- Los botones los quitaremos de la barra. -->
 
                     </DockPanel>
                 </Border>
             </Grid>
-            <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
-                <Button  Content="1" Style="{StaticResource ResourceKey=CircularButtonStyle}"/>
-                <Button  Content="2" Style="{StaticResource ResourceKey=CircularButtonStyle}"/>
-            </StackPanel>
-            <Border BorderBrush="Black" BorderThickness="1" CornerRadius="7"
-                    Width="{Binding Source={x:Static SystemParameters.PrimaryScreenHeight}, Converter={tools:RatioConverter}, ConverterParameter='1.3' }"
-                    Height="{Binding Source={x:Static SystemParameters.PrimaryScreenHeight}, Converter={tools:RatioConverter}, ConverterParameter='0.65' }" Background="#FFD2D2D2"
+
+
+            <Border DockPanel.Dock="Left"  BorderBrush="Black" CornerRadius="0,0,0,15" BorderThickness="0,0,1,0" Background="#FF7885A4"
+                    Width="{Binding Source={x:Static SystemParameters.PrimaryScreenHeight}, Converter={tools:RatioConverter}, ConverterParameter='0.05' }" Padding="0,60,0,0" 
                     >
-                <ContentControl Content="{Binding Path=ContenidoCalendario }"></ContentControl>
+
+                <Border.Effect>
+                    <DropShadowEffect Color="Black" Direction="0
+                                      " ShadowDepth="5" Opacity="0.1"/>
+                </Border.Effect>
+
+                <StackPanel Orientation="Vertical" >
+                    <Button Style="{StaticResource ResourceKey=CircularButtonStyle}" ToolTip="Calendario">
+                        <Image Source="/Resources/calendario-de-fechas.png" Width="27" OpacityMask="Black">
+
+                        </Image>
+                    </Button>
+                    <Button  Style="{StaticResource ResourceKey=CircularButtonStyle}" ToolTip="Clientes">
+                        <Image Source="/Resources/clients.png" Width="34">
+
+                        </Image>
+                    </Button>
+
+
+                    <Button Style="{StaticResource ResourceKey=CircularButtonStyle}" ToolTip="Trabajadores">
+                        <Image Source="/Resources/trabajadores.png" Width="32">
+
+                        </Image>
+                    </Button>
+
+                    <Button Style="{StaticResource ResourceKey=CircularButtonStyle}" ToolTip="Trabajadores">
+                        <Image Source="/Resources/ruleta.png" Width="27">
+
+                        </Image>
+                    </Button>
+                </StackPanel>
+
+            </Border>
+
+            <Border
+                    Width="{Binding Source={x:Static SystemParameters.PrimaryScreenHeight}, Converter={tools:RatioConverter}, ConverterParameter='1.3' }"
+                    Height="{Binding Source={x:Static SystemParameters.PrimaryScreenHeight}, Converter={tools:RatioConverter}, ConverterParameter='0.65' }" Margin="0,0,50,0" 
+                    >
+                <ContentControl Content="{Binding Path=ContenidoPrincipal }"></ContentControl>
             </Border>
 
 
 
         </DockPanel>
-        
-        
+
+
 
     </Border>
 

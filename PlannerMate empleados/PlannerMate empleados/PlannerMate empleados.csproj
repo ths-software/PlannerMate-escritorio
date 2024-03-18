@@ -9,7 +9,40 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\calendario-de-fechas.png" />
+    <None Remove="Resources\clients.png" />
+    <None Remove="Resources\perfil.png" />
+    <None Remove="Resources\ruleta.png" />
+    <None Remove="Resources\trabajadores.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="RestSharp" Version="110.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\calendario-de-fechas.png" />
+    <Resource Include="Resources\clients.png" />
+    <Resource Include="Resources\perfil.png" />
+    <Resource Include="Resources\ruleta.png" />
+    <Resource Include="Resources\trabajadores.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
 
 </Project>

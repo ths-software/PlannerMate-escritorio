@@ -10,7 +10,7 @@ namespace PlannerMate_empleados.Services
 {
     static class NavigationServices
     {
-
+        //public static UserControl LoadGestionDia() => new GestionDia();
 
 
         public static UserControl LoadCalendario()

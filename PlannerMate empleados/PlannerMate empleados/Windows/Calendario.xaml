@@ -12,7 +12,17 @@
         <Style TargetType="Border" x:Key="resaltarDiaActual">
             <Style.Triggers>
                 <DataTrigger Binding="{Binding DiaActual}" Value="True">
-                    <Setter Property="Background" Value="Yellow"/>
+                    <Setter Property="Background" Value="#FF87E0F7"/>
+                    <!-- Cambiar a tu color de resaltado preferido -->
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style TargetType="Border" x:Key="resaltarDiaSeleccionado">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding IsSelected}" Value="True">
+                    <Setter Property="BorderBrush" Value="#FFFFA74D"/>
+                    <Setter Property="BorderThickness" Value="3"/>
                     <!-- Cambiar a tu color de resaltado preferido -->
                 </DataTrigger>
             </Style.Triggers>
@@ -25,11 +35,18 @@
                     <MouseBinding Gesture="LeftClick" Command="{Binding DataContext.SelectDayCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}" CommandParameter="{Binding}"/>
                 </Border.InputBindings>
 
-                <DockPanel LastChildFill="False">
-                    <Border x:Name="TitleDay" DockPanel.Dock="Top" Style="{StaticResource resaltarDiaActual}">
-                        <TextBlock Text="{Binding}" HorizontalAlignment="Center"/>
-                    </Border>
-                </DockPanel>
+                <Border x:Name="DayCeld" Style="{StaticResource resaltarDiaSeleccionado}">
+                    <StackPanel>
+                        <DockPanel LastChildFill="True">
+                            <Border x:Name="TitleDay" DockPanel.Dock="Top" Style="{StaticResource resaltarDiaActual}">
+                                <StackPanel>
+                                    <TextBlock Text="{Binding}" HorizontalAlignment="Center"></TextBlock>
+                                </StackPanel>
+                            </Border>
+                            <TextBlock TextAlignment="Center" Text="{Binding InfoCitas}"></TextBlock>
+                        </DockPanel>
+                    </StackPanel>
+                </Border>
 
             </Border>
             
@@ -37,49 +54,60 @@
 
         <Style TargetType="Border" x:Key="diasCelds">
 
+            <Setter Property="BorderBrush" Value="Black"></Setter>
+            <Setter Property="BorderThickness" Value="0,1,0,1"></Setter>
         </Style>
 
-        
-        
+        <Style TargetType="TextBlock" x:Key="diasCeldsText">
+
+            <Setter Property="TextAlignment" Value="Center"></Setter>
+            <Setter Property="FontSize" Value="18"></Setter>
+            <Setter Property="Foreground" Value="White"></Setter>
+        </Style>
+
+
+
     </UserControl.Resources>
 
     <DockPanel LastChildFill="True">
-        <Border DockPanel.Dock="top" Height="30">
+        <Border DockPanel.Dock="top" >
             <!-- Month/Year header -->
 
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                <TextBlock Width="300" Margin="0,0,10,0" TextAlignment="Center" VerticalAlignment="Center" Text="{Binding DisplayedMonthYear}" FontSize="30" />
+                
                 <Button Command="{Binding Path=AtrasarMesCommand}" Content="&lt;" Height="25" Width="25"></Button>
-                <TextBlock Width="100" TextAlignment="Center" Text="{Binding DisplayedMonthYear}" />
+                
                 <Button Command="{Binding Path=AdelantarMesCommand}" Content=">" Height="25" Width="25"></Button>
             </StackPanel>
         </Border>
-        
-        <Border DockPanel.Dock="Top" Height="20">
+
+        <Border DockPanel.Dock="Top" Background="#FF41426D">
             <UniformGrid Rows="1" Columns="7">
-                <Border Style="{StaticResource diasCelds}" BorderBrush="Black" BorderThickness="1">
-                    <TextBlock Text="Lunes" />
+                <Border Style="{StaticResource diasCelds}" BorderThickness="1,1,0,1">
+                    <TextBlock Text="Lunes" Style="{StaticResource diasCeldsText}"/>
                 </Border>
-                <Border Style="{StaticResource diasCelds}" BorderBrush="Black" BorderThickness="1">
-                    <TextBlock Text="Martes" />
+                <Border Style="{StaticResource diasCelds}">
+                    <TextBlock Text="Martes" Style="{StaticResource diasCeldsText}"/>
                 </Border>
-                <Border Style="{StaticResource diasCelds}" BorderBrush="Black" BorderThickness="1">
-                    <TextBlock Text="Miercoles" />
+                <Border Style="{StaticResource diasCelds}">
+                    <TextBlock Text="Miércoles" Style="{StaticResource diasCeldsText}"/>
                 </Border>
-                <Border Style="{StaticResource diasCelds}" BorderBrush="Black" BorderThickness="1">
-                    <TextBlock Text="Jueves" />
+                <Border Style="{StaticResource diasCelds}">
+                    <TextBlock Text="Jueves" Style="{StaticResource diasCeldsText}"/>
                 </Border>
-                <Border Style="{StaticResource diasCelds}" BorderBrush="Black" BorderThickness="1">
-                    <TextBlock Text="Viernes" />
+                <Border Style="{StaticResource diasCelds}">
+                    <TextBlock Text="Viernes" Style="{StaticResource diasCeldsText}"/>
                 </Border>
-                <Border Style="{StaticResource diasCelds}" BorderBrush="Black" BorderThickness="1">
-                    <TextBlock Text="Sabado" />
+                <Border Style="{StaticResource diasCelds}">
+                    <TextBlock Text="Sábado" Style="{StaticResource diasCeldsText}"/>
                 </Border>
-                <Border Style="{StaticResource diasCelds}" BorderBrush="Black" BorderThickness="1">
-                    <TextBlock Text="Domingo" />
+                <Border Style="{StaticResource diasCelds}" BorderThickness="0,1,1,1">
+                    <TextBlock Text="Domingo" Style="{StaticResource diasCeldsText}"/>
                 </Border>
             </UniformGrid>
         </Border>
-        <Border Background="#FFE2E2E2" >
+        <Border >
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
