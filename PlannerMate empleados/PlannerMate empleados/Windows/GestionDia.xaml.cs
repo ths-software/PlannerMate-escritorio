@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PlannerMate_empleados.VMs;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,14 +16,17 @@ using System.Windows.Shapes;
 
 namespace PlannerMate_empleados.Windows
 {
-    /// <summary>
-    /// Lógica de interacción para GestionDia.xaml
-    /// </summary>
     public partial class GestionDia : UserControl
     {
+
+        GestionDiaVM vm;
         public GestionDia()
         {
+            vm = new GestionDiaVM();
             InitializeComponent();
+            this.DataContext = vm;
         }
+
+
     }
 }

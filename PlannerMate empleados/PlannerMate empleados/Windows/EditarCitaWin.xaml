@@ -1,0 +1,66 @@
+﻿<Window x:Class="PlannerMate_empleados.Windows.EditarCitaWin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PlannerMate_empleados.Windows"
+        mc:Ignorable="d"
+        Title="EditarCitaWin" Height="550" Width="800">
+
+    <Window.Resources>
+        <Style TargetType="StackPanel" x:Key="stack1">
+            <Setter Property="Margin" Value="10,10,0,20"></Setter>
+            <Setter Property="HorizontalAlignment" Value="Left"></Setter>
+        </Style>
+
+        <Style TargetType="TextBox">
+            <Style.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5" />
+                </Style>
+            </Style.Resources>
+            <Setter Property="BorderBrush" Value="#FFA4A4A4"></Setter>
+            <Setter Property="Height" Value="30"></Setter>
+            <Setter Property="Width" Value="500"></Setter>
+        </Style>
+    </Window.Resources>
+    
+    <DockPanel LastChildFill="True">
+        <StackPanel DockPanel.Dock="Top">
+            <TextBlock Text="Dia seleccionado" FontSize="20"></TextBlock>
+        </StackPanel>
+        <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" HorizontalAlignment="Right"> 
+            <Button Content="Aceptar"></Button>
+            <Button Content="Aceptar"></Button>
+        </StackPanel>
+        <StackPanel>
+            <TextBlock Text="IdCita: 0"></TextBlock>
+
+            <StackPanel Style="{StaticResource stack1}">
+                <TextBlock Text="Nombre"></TextBlock>
+                <TextBox></TextBox>
+            </StackPanel>
+            <StackPanel Style="{StaticResource stack1}">
+                <TextBlock Text="Contacto"></TextBlock>
+                <TextBox></TextBox>
+            </StackPanel>
+            <StackPanel Style="{StaticResource stack1}">
+                <TextBlock Text="Fecha(Poner el dia automatico y luego la hora introducida quizas hacer un validador de hora)"></TextBlock>
+                <TextBox></TextBox>
+            </StackPanel>
+            <StackPanel Style="{StaticResource stack1}">
+                <TextBlock Text="Descripcion"></TextBlock>
+                <TextBox></TextBox>
+            </StackPanel>
+            <StackPanel Style="{StaticResource stack1}">
+                <TextBlock Text="peluquero (quizás hacer un dropdown)"></TextBlock>
+                <TextBox></TextBox>
+            </StackPanel>
+            <StackPanel Style="{StaticResource stack1}">
+                <TextBlock Text="Cliente (opcional, pensar un método para que cuadre con los clientes)"></TextBlock>
+                <TextBox></TextBox>
+            </StackPanel>
+
+        </StackPanel>
+    </DockPanel>
+</Window>

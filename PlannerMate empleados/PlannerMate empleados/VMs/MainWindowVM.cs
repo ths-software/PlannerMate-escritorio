@@ -1,5 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using CommunityToolkit.Mvvm.Messaging;
+using PlannerMate_empleados.Classes;
 using PlannerMate_empleados.Services;
 using System;
 using System.Collections.Generic;
@@ -16,7 +18,10 @@ namespace PlannerMate_empleados.VMs
         private UserControl contenidoPrincipal;
 
 
-        public RelayCommand AbrirCalendario;
+        public RelayCommand AbrirCalendario { get; }
+
+        public RelayCommand AbrirGestionDia { get; }
+
 
 
         public UserControl ContenidoPrincipal
@@ -29,6 +34,7 @@ namespace PlannerMate_empleados.VMs
         {
 
             AbrirCalendario = new RelayCommand(CargarCalendario);
+            AbrirGestionDia = new RelayCommand(CargarGestionDia);
         }
 
 
@@ -37,6 +43,11 @@ namespace PlannerMate_empleados.VMs
         public void CargarCalendario()
         {
             ContenidoPrincipal = NavigationServices.LoadCalendario();
+        }
+        public void CargarGestionDia()
+        {
+            ContenidoPrincipal = NavigationServices.LoadGestionDia();
+            
         }
     }
 }

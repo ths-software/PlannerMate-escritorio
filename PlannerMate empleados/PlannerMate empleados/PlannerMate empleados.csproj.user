@@ -7,7 +7,13 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Windows\AddCitaWin.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Windows\Calendario.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\EditarCitaWin.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Windows\GestionDia.xaml.cs">
@@ -18,7 +24,13 @@
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Windows\AddCitaWin.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Windows\Calendario.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\EditarCitaWin.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Windows\GestionDia.xaml">

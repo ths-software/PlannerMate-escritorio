@@ -59,3 +59,7 @@ C:\Users\andun\OneDrive - Conselleria d'Educació\Asignaturas\2DAM\X.Proyecto Fi
 C:\Users\andun\OneDrive - Conselleria d'Educació\Asignaturas\2DAM\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Debug\net6.0-windows\PlannerMate empleados.csproj.GenerateResource.cache
 C:\Users\andun\OneDrive - Conselleria d'Educació\Asignaturas\2DAM\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Debug\net6.0-windows\Windows\GestionDia.g.cs
 C:\Users\andun\OneDrive - Conselleria d'Educació\Asignaturas\2DAM\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Debug\net6.0-windows\Windows\GestionDia.baml
+C:\Users\andun\OneDrive - Conselleria d'Educació\Asignaturas\2DAM\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Debug\net6.0-windows\Windows\AddCitaWin.g.cs
+C:\Users\andun\OneDrive - Conselleria d'Educació\Asignaturas\2DAM\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Debug\net6.0-windows\Windows\EditarCitaWin.g.cs
+C:\Users\andun\OneDrive - Conselleria d'Educació\Asignaturas\2DAM\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Debug\net6.0-windows\Windows\AddCitaWin.baml
+C:\Users\andun\OneDrive - Conselleria d'Educació\Asignaturas\2DAM\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Debug\net6.0-windows\Windows\EditarCitaWin.baml

@@ -13,7 +13,7 @@
             <Style.Triggers>
                 <DataTrigger Binding="{Binding DiaActual}" Value="True">
                     <Setter Property="Background" Value="#FF87E0F7"/>
-                    <!-- Cambiar a tu color de resaltado preferido -->
+                    <!-- Cambiar color -->
                 </DataTrigger>
             </Style.Triggers>
         </Style>
@@ -23,7 +23,7 @@
                 <DataTrigger Binding="{Binding IsSelected}" Value="True">
                     <Setter Property="BorderBrush" Value="#FFFFA74D"/>
                     <Setter Property="BorderThickness" Value="3"/>
-                    <!-- Cambiar a tu color de resaltado preferido -->
+                    <!-- Cambiar color -->
                 </DataTrigger>
             </Style.Triggers>
         </Style>
@@ -111,11 +111,9 @@
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
-                    <!-- Add more column definitions if needed for day names, etc. -->
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
-                    <!-- Add more row definitions if needed for month/year header, etc. -->
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
 

@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\andun\OneDrive - Conselleria d'Educació\Asignaturas\2DAM\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\App.xaml
-3-32527563
+5-1040611797
 
-171679821023
+23-2100126612
 1971399012825
-MainWindow.xaml;Windows\Calendario.xaml;Windows\GestionDia.xaml;
+MainWindow.xaml;Windows\AddCitaWin.xaml;Windows\Calendario.xaml;Windows\EditarCitaWin.xaml;Windows\GestionDia.xaml;
 
-False
+True
 

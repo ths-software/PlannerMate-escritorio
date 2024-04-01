@@ -3,10 +3,57 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             
              xmlns:local="clr-namespace:PlannerMate_empleados.Windows"
+             xmlns:converters="clr-namespace:PlannerMate_empleados.Converters"
+             
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Background="White">
-            
+    <UserControl.Resources>
+        <converters:EmptyValueConverter x:Key="EmptyValueConverter"/>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="5,0,5,0"></Setter>
+        </Style>
+        
+        
+    </UserControl.Resources>
+    <Grid>
+        <StackPanel>
+            <StackPanel>
+                <Border BorderBrush="Black" BorderThickness="0.2">
+                    <StackPanel Height="30" Background="White" Orientation="Horizontal">
+                        <Button Command="{Binding Path=AbrirAñadirCita}" Content="+" Width="30"></Button>
+                        <Button Content="" Width="30"></Button>
+                        <Button Content="" Width="30"></Button>
+                        <Button Content="" Width="30"></Button>
+                    </StackPanel>
+                </Border>
+                <Border BorderBrush="Black" BorderThickness="0.2" Background="#FFC1C1C1">
+                    <TextBlock Text="{Binding DiaSeleccionado, Converter={StaticResource EmptyValueConverter}}" />
+                </Border>
+            </StackPanel>
+            <Border BorderBrush="Black" BorderThickness="0.2">
+                <ListBox ItemsSource="{Binding TrabajadoresConCitas}" SelectionMode="Extended">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="{Binding Trabajador.Nombre}" FontWeight="Bold" Margin="0,0,10,0"/>
+                                <ListBox Grid.Column="1" ItemsSource="{Binding Citas}" SelectionMode="Single">
+                                    <ListBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="{Binding Descripcion}"/>
+                                        </DataTemplate>
+                                    </ListBox.ItemTemplate>
+                                </ListBox>
+                            </Grid>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </Border>
+        </StackPanel>
     </Grid>
 </UserControl>

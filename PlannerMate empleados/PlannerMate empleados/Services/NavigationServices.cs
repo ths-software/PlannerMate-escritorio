@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace PlannerMate_empleados.Services
@@ -16,6 +17,17 @@ namespace PlannerMate_empleados.Services
         public static UserControl LoadCalendario()
         {
             return new Calendario();
+        }
+
+        public static UserControl LoadGestionDia()
+        {
+            return new GestionDia();
+        }
+
+        public static void LoadAddCita()
+        {
+            AddCitaWin addCitaWin = new AddCitaWin();
+            addCitaWin.Show();
         }
 
     }

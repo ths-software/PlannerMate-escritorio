@@ -92,12 +92,12 @@
                 </Border.Effect>
 
                 <StackPanel Orientation="Vertical" >
-                    <Button Style="{StaticResource ResourceKey=CircularButtonStyle}" ToolTip="Calendario">
+                    <Button Command="{Binding Path=AbrirCalendario}" Style="{StaticResource ResourceKey=CircularButtonStyle}" ToolTip="Calendario">
                         <Image Source="/Resources/calendario-de-fechas.png" Width="27" OpacityMask="Black">
 
                         </Image>
                     </Button>
-                    <Button  Style="{StaticResource ResourceKey=CircularButtonStyle}" ToolTip="Clientes">
+                    <Button Style="{StaticResource ResourceKey=CircularButtonStyle}" ToolTip="Clientes" >
                         <Image Source="/Resources/clients.png" Width="34">
 
                         </Image>
@@ -110,7 +110,7 @@
                         </Image>
                     </Button>
 
-                    <Button Style="{StaticResource ResourceKey=CircularButtonStyle}" ToolTip="Trabajadores">
+                    <Button Command="{Binding Path=AbrirGestionDia}" Style="{StaticResource ResourceKey=CircularButtonStyle}" ToolTip="Trabajadores">
                         <Image Source="/Resources/ruleta.png" Width="27">
 
                         </Image>

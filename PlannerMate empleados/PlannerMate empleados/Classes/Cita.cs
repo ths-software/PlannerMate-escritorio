@@ -14,7 +14,7 @@ namespace PlannerMate_empleados.Classes
         public int IdCita { get; set; }
         public string Nombre { get; set; }
         public string Contacto { get; set; }
-        public DateTime Fecha { get; set; }       // aqui sin string da error, mirar
+        public DateTime Fecha { get; set; }       
         public string Descripcion { get; set; }
 
         [ForeignKey("Trabajador")]

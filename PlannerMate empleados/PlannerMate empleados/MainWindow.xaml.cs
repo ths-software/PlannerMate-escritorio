@@ -1,4 +1,5 @@
 ﻿using PlannerMate_empleados.VMs;
+using PlannerMate_empleados.Windows;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,12 +17,11 @@ using System.Windows.Shapes;
 
 namespace PlannerMate_empleados
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
+    
     public partial class MainWindow : Window
     {
         MainWindowVM vm;
+
         public MainWindow()
         {
             vm = new MainWindowVM();

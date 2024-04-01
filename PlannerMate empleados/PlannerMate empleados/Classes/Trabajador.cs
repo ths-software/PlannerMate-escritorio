@@ -14,5 +14,20 @@ namespace PlannerMate_empleados.Classes
         public string Nombre { get; set; }
         public string Contacto { get; set; }
 
+
+        public override bool Equals(object obj)
+        {
+            if (obj == null || GetType() != obj.GetType())
+                return false;
+
+            Trabajador otroTrabajador = (Trabajador)obj;
+            return Nombre.Equals(otroTrabajador.Nombre);
+        }
+
+        public override int GetHashCode()
+        {
+            return Nombre.GetHashCode();
+        }
+
     }
 }

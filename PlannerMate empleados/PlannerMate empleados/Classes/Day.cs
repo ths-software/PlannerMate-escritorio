@@ -108,7 +108,7 @@ namespace PlannerMate_empleados.Classes
             //}
 
 
-            return DayNumber == 0 ? "" : $"{DayNumber.ToString()}";
+            return DayNumber == 0 ? "" : $"{DayNumber}";
         }
     }
 }

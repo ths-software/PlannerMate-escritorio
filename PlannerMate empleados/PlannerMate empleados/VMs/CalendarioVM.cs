@@ -12,6 +12,8 @@ using System.Windows.Controls;
 using PlannerMate_empleados.Classes;
 using System.Reflection;
 using PlannerMate_empleados.Services;
+using CommunityToolkit.Mvvm.Messaging;
+using static PlannerMate_empleados.Services.DiaSeleccionadoMessage;
 
 namespace PlannerMate_empleados.VMs
 {
@@ -29,24 +31,13 @@ namespace PlannerMate_empleados.VMs
         public Day DiaSeleccionado
         {
             get => diaSeleccionado;
-            set=> SetProperty(ref diaSeleccionado, value);
+            set => SetProperty(ref diaSeleccionado, value);
         }
 
         public RelayCommand<Day> SelectDayCommand { get; }
 
         public RelayCommand AdelantarMesCommand { get; }
         public RelayCommand AtrasarMesCommand { get; }
-
-
-        public RelayCommand AbrirGestionDia { get; }
-        /*
-         * Gestión día necesitará diaSeleccionado
-         * Como en gestionDia solo se accede cuando seleccionas un día, tendrás un día seleccionado obligatoriamente.
-         * Quizás haya que hacer que el dia se seleccione con un borde en el dia clickado y luego
-         * tengas que hacer click en el menú lateral en la opción, gestionar día
-         */
-
-
 
         private DateTime displayedDate;
         public DateTime DisplayedDate
@@ -81,6 +72,15 @@ namespace PlannerMate_empleados.VMs
             AdelantarMesCommand = new RelayCommand(AdelantarMes);
             AtrasarMesCommand = new RelayCommand(AtrasarMes);
 
+            WeakReferenceMessenger.Default.Reset();
+            WeakReferenceMessenger.Default.Register<CalendarioVM, DiaSeleccionadoRequest>(this, (r, m) =>
+            {
+                m.Reply(r.DiaSeleccionado);
+            });
+            
+            // tambien enviamos las citas del día,cuando le pasamos el day, entonces como es una lista de citas, si le hacemos un add
+            // también se actualizará
+
         }
 
 
@@ -95,27 +95,25 @@ namespace PlannerMate_empleados.VMs
             DisplayedDate = DisplayedDate.AddMonths(1);
         }
 
-
-        private void SeleccionarDia(Day day)
-        {
-            // Mostrar un MessageBox con la información del día seleccionado
-            //MessageBox.Show($"Ha seleccionado el día {day.DayNumber} - {day.Date}");
-
-            DiaSeleccionado = day;
-
-        }
-
         private void SelectDay(Day day)
         {
-            // Lógica de selección del día aquí (puedes agregar la lógica según tus necesidades)
+            // Lógica de selección del día aquí (puedes agregar la lógica según las necesidades)
             // Por ejemplo, puedes cambiar el color de fondo o realizar alguna acción específica
             // Lógica para cambiar el estado de IsSelected cuando se selecciona un día
+            // el color del dia seleccionado se cambia segun si el dia es seleccionado o no, en el xaml
             foreach (var d in Days)
             {
                 d.IsSelected = d == day;
             }
 
-            SeleccionarDia(day);
+            DiaSeleccionado = day;
+
+           WeakReferenceMessenger.Default.Reset();
+            WeakReferenceMessenger.Default.Register<CalendarioVM, DiaSeleccionadoRequest>(this, (r, m) =>
+            {
+                m.Reply(r.DiaSeleccionado);
+            });
+
         }
 
         private void SetCalendario()
