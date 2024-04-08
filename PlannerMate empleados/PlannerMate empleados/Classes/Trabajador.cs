@@ -14,20 +14,46 @@ namespace PlannerMate_empleados.Classes
         public string Nombre { get; set; }
         public string Contacto { get; set; }
 
-
-        public override bool Equals(object obj)
+        public Trabajador(int idTrabajador, string nombre, string contacto)
         {
-            if (obj == null || GetType() != obj.GetType())
-                return false;
+            IdTrabajador = idTrabajador;
+            Nombre = nombre;
+            Contacto = contacto;
+        }
 
-            Trabajador otroTrabajador = (Trabajador)obj;
-            return Nombre.Equals(otroTrabajador.Nombre);
+        public Trabajador()
+        {
+        }
+
+        public override bool Equals(object? obj)
+        {
+            return obj is Trabajador trabajador &&
+                   IdTrabajador == trabajador.IdTrabajador &&
+                   Nombre == trabajador.Nombre &&
+                   Contacto == trabajador.Contacto;
         }
 
         public override int GetHashCode()
         {
-            return Nombre.GetHashCode();
+            return HashCode.Combine(IdTrabajador, Nombre, Contacto);
         }
+
+        //public override bool Equals(object obj)
+        //{
+        //    if (obj == null || GetType() != obj.GetType())
+        //        return false;
+
+        //    Trabajador otroTrabajador = (Trabajador)obj;
+        //    return Nombre.Equals(otroTrabajador.Nombre);
+        //}
+
+        //public override int GetHashCode()
+        //{
+        //    return Nombre.GetHashCode();
+        //}
+
+
+
 
     }
 }

@@ -18,13 +18,27 @@ namespace PlannerMate_empleados.Classes
         public string Descripcion { get; set; }
 
         [ForeignKey("Trabajador")]
-        public int IdTrabajador { get; set; }
         public Trabajador Trabajador { get; set; }
 
         [ForeignKey("Cliente")]
         public int IdCliente { get; set; }
         public Cliente Cliente { get; set; }
 
+        public Cita(int idCita, string nombre, string contacto, DateTime fecha, string descripcion, Trabajador trabajador, int idCliente, Cliente cliente)
+        {
+            IdCita = idCita;
+            Nombre = nombre;
+            Contacto = contacto;
+            Fecha = fecha;
+            Descripcion = descripcion;
+            Trabajador = trabajador;
+            IdCliente = idCliente;
+            Cliente = cliente;
+        }
+
+        public Cita()
+        {
+        }
 
         public override string ToString()
         {

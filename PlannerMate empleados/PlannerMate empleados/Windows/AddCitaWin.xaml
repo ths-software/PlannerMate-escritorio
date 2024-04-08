@@ -39,26 +39,29 @@
         <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" HorizontalAlignment="Right"
                     Height="70">
             <Button Content="Cancelar"></Button>
-            <Button Content="Aceptar"></Button>
+            <Button Command="{Binding AddCitaCommand}" Content="Aceptar"></Button>
         </StackPanel>
         <StackPanel>
             <TextBlock Text="IdCita: 0" Margin="24,0,0,0"></TextBlock>
 
             <StackPanel Style="{StaticResource stack1}">
                 <TextBlock Text="Nombre"></TextBlock>
-                <TextBox></TextBox>
+                <TextBox Text="{Binding Path=CitaToAdd.Nombre}"></TextBox>
             </StackPanel>
             <StackPanel Style="{StaticResource stack1}">
                 <TextBlock Text="Contacto"></TextBlock>
-                <TextBox></TextBox>
+                <TextBox Text="{Binding Path=CitaToAdd.Contacto}"></TextBox>
             </StackPanel>
             <StackPanel Style="{StaticResource stack1}">
-                <TextBlock Text="Fecha(Poner el dia automatico y luego la hora introducida quizas hacer un validador de hora)"></TextBlock>
-                <TextBox></TextBox>
+                <TextBlock Text="Hora (HH:mm:ss)"></TextBlock>
+                <StackPanel Orientation="Horizontal">
+
+                    <TextBox Margin="0,0,10,0" Text="{Binding Path=HoraToAdd}"></TextBox>
+                </StackPanel>
             </StackPanel>
             <StackPanel Style="{StaticResource stack1}">
                 <TextBlock Text="Descripcion"></TextBlock>
-                <TextBox></TextBox>
+                <TextBox Text="{Binding CitaToAdd.Descripcion}"></TextBox>
             </StackPanel>
             <StackPanel Style="{StaticResource stack1}">
                 <TextBlock Text="peluquero (quizás hacer un dropdown)"></TextBlock>

@@ -39,7 +39,6 @@ namespace PlannerMate_empleados.VMs
             DiaSeleccionado = WeakReferenceMessenger.Default.Send<DiaSeleccionadoRequest>(); // si no hago click en un dia, se rompe 
             // como que no manda un mensaje y esto no recibe nada
 
-            
 
             if (DiaSeleccionado != null)
             {
@@ -65,13 +64,14 @@ namespace PlannerMate_empleados.VMs
             }
 
             AbrirAñadirCita = new RelayCommand(CargarAddCita);
+            System.Diagnostics.Debug.WriteLine("LoqueHay:\n" + DiaSeleccionado.InfoCitas);
         }
 
         public void CargarAddCita()
         {
             NavigationServices.LoadAddCita();
         }
-       
+
 
     }
 
