@@ -25,10 +25,15 @@ namespace PlannerMate_empleados.Services
             return new GestionDia();
         }
 
-        public static void LoadAddCita()
+        //public static void LoadAddCita()
+        //{
+        //    AddCitaWin addCitaWin = new AddCitaWin();
+        //    addCitaWin.Show();
+        //}
+
+        public static UserControl LoadAddCita()
         {
-            AddCitaWin addCitaWin = new AddCitaWin();
-            addCitaWin.Show();
+            return new AddCitaWin();
         }
 
 

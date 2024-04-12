@@ -10,30 +10,23 @@ namespace PlannerMate_empleados.Classes
 {
     public class Cita
     {
-        [Key]
         public int IdCita { get; set; }
-        public string Nombre { get; set; }
-        public string Contacto { get; set; }
-        public DateTime Fecha { get; set; }       
-        public string Descripcion { get; set; }
-
-        [ForeignKey("Trabajador")]
-        public Trabajador Trabajador { get; set; }
-
-        [ForeignKey("Cliente")]
-        public int IdCliente { get; set; }
+        public string nombre { get; set; }
+        public string contacto { get; set; }
+        public DateTime fecha { get; set; }
+        public string descripcion { get; set; }
+        public Trabajador trabajador { get; set; }
         public Cliente Cliente { get; set; }
 
-        public Cita(int idCita, string nombre, string contacto, DateTime fecha, string descripcion, Trabajador trabajador, int idCliente, Cliente cliente)
+        public Cita(int idCita, string nombre, string contacto, DateTime fecha, string descripcion, Trabajador trabajador, Cliente cliente)
         {
             IdCita = idCita;
-            Nombre = nombre;
-            Contacto = contacto;
-            Fecha = fecha;
-            Descripcion = descripcion;
-            Trabajador = trabajador;
-            IdCliente = idCliente;
-            Cliente = cliente;
+            this.nombre = nombre;
+            this.contacto = contacto;
+            this.fecha = fecha;
+            this.descripcion = descripcion;
+            this.trabajador = trabajador;
+            this.Cliente = cliente;
         }
 
         public Cita()
@@ -42,7 +35,7 @@ namespace PlannerMate_empleados.Classes
 
         public override string ToString()
         {
-            return $"{Descripcion}";
+            return $"{descripcion}";
         }
     }
 }

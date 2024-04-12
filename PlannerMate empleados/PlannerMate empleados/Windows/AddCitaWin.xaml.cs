@@ -11,18 +11,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace PlannerMate_empleados.Windows
 {
-    public partial class AddCitaWin : Window
+    public partial class AddCitaWin : UserControl
     {
-        AddCitaVM addCitaVM;
+        AddCitaVM vm;
         public AddCitaWin()
         {
-            addCitaVM = new AddCitaVM();
+            vm = new AddCitaVM();
             InitializeComponent();
-            this.DataContext = addCitaVM;
+            this.DataContext = vm;
         }
     }
 }

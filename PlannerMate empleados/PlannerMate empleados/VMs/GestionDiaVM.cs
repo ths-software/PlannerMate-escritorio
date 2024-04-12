@@ -23,15 +23,15 @@ namespace PlannerMate_empleados.VMs
             set => SetProperty(ref diaSeleccionado, value);
         }
 
-        private ObservableCollection<TrabajadorConCitas> trabajadoresConCitas;
-        public ObservableCollection<TrabajadorConCitas> TrabajadoresConCitas
+        private ObservableCollection<Trabajador> trabajadoresConCitas;
+        public ObservableCollection<Trabajador> TrabajadoresConCitas
         {
             get => trabajadoresConCitas;
             set => SetProperty(ref trabajadoresConCitas, value);
         }
 
 
-        public RelayCommand AbrirAñadirCita { get; }
+
 
         public GestionDiaVM()
         {
@@ -42,72 +42,26 @@ namespace PlannerMate_empleados.VMs
 
             if (DiaSeleccionado != null)
             {
-                var citasPorTrabajador = DiaSeleccionado.Citas.GroupBy(cita => cita.Trabajador);
+                var citasPorTrabajador = DiaSeleccionado.Citas.GroupBy(cita => cita.trabajador);
                 // Seleccionamos solo los trabajadores únicos
-                var trabajadoresUnicos = diaSeleccionado.Citas.Select(cita => cita.Trabajador).Distinct();
+                var trabajadoresUnicos = DiaSeleccionado.Citas.Select(cita => cita.trabajador).Distinct();
 
                 // Para cada trabajador único, obtenemos sus citas y creamos instancias de TrabajadorConCitas
                 var citasAgrupadas = trabajadoresUnicos.Select(trabajador =>
                 {
-                    var citasTrabajador = diaSeleccionado.Citas.Where(cita => cita.Trabajador.Equals(trabajador));
-                    return new TrabajadorConCitas
+                    var citasTrabajador = DiaSeleccionado.Citas.Where(cita => cita.trabajador.Equals(trabajador));
+                    return new Trabajador
                     {
-                        Trabajador = trabajador,
+                        nombre = trabajador.nombre,
                         Citas = new ObservableCollection<Cita>(citasTrabajador)
                     };
                 });
 
                 // Creamos la lista de trabajadores con citas
-                TrabajadoresConCitas = new ObservableCollection<TrabajadorConCitas>(citasAgrupadas);
+                TrabajadoresConCitas = new ObservableCollection<Trabajador>(citasAgrupadas);
 
 
             }
-
-            AbrirAñadirCita = new RelayCommand(CargarAddCita);
-            System.Diagnostics.Debug.WriteLine("LoqueHay:\n" + DiaSeleccionado.InfoCitas);
-        }
-
-        public void CargarAddCita()
-        {
-            NavigationServices.LoadAddCita();
-        }
-
-
-    }
-
-
-
-
-    public class TrabajadorConCitas
-    {
-        public Trabajador Trabajador { get; set; }
-
-        public string CitasInfo
-        {
-            get
-            {
-                return GetCitasTrabajador();
-            }
-        }
-        public ObservableCollection<Cita> Citas { get; set; }
-
-
-        public string GetCitasTrabajador()
-        {
-            StringBuilder sb = new StringBuilder();
-
-            foreach (Cita cita in Citas)
-            {
-                sb.Append($"Cliente: {cita.Nombre} Descripción: {cita.Descripcion}.\n");
-            }
-            sb.Append("");
-
-            return sb.ToString();
-        }
-
-        public override string ToString()
-        {
-            return $"{Trabajador}";
         }
     }
 }

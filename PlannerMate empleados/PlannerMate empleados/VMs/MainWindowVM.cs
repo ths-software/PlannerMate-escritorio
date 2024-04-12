@@ -22,7 +22,7 @@ namespace PlannerMate_empleados.VMs
 
         public RelayCommand AbrirGestionDia { get; }
 
-
+        public RelayCommand AbrirAñadirCita { get; }
 
         public UserControl ContenidoPrincipal
         {
@@ -35,6 +35,7 @@ namespace PlannerMate_empleados.VMs
 
             AbrirCalendario = new RelayCommand(CargarCalendario);
             AbrirGestionDia = new RelayCommand(CargarGestionDia);
+            AbrirAñadirCita = new RelayCommand(CargarAddCita);
         }
 
 
@@ -48,6 +49,10 @@ namespace PlannerMate_empleados.VMs
         {
             ContenidoPrincipal = NavigationServices.LoadGestionDia();
             
+        }
+        public void CargarAddCita()
+        {
+            ContenidoPrincipal = NavigationServices.LoadAddCita();
         }
     }
 }

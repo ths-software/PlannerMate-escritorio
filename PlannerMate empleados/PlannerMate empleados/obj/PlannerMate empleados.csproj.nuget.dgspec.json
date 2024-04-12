@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\andun\\OneDrive - Conselleria d'Educació\\Asignaturas\\2DAM\\X.Proyecto Final\\DAM-ProyectoFinal-Desktop\\PlannerMate empleados\\PlannerMate empleados\\PlannerMate empleados.csproj": {}
+    "C:\\Users\\andun\\Documents\\X.Proyecto Final\\DAM-ProyectoFinal-Desktop\\PlannerMate empleados\\PlannerMate empleados\\PlannerMate empleados.csproj": {}
   },
   "projects": {
-    "C:\\Users\\andun\\OneDrive - Conselleria d'Educació\\Asignaturas\\2DAM\\X.Proyecto Final\\DAM-ProyectoFinal-Desktop\\PlannerMate empleados\\PlannerMate empleados\\PlannerMate empleados.csproj": {
+    "C:\\Users\\andun\\Documents\\X.Proyecto Final\\DAM-ProyectoFinal-Desktop\\PlannerMate empleados\\PlannerMate empleados\\PlannerMate empleados.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\andun\\OneDrive - Conselleria d'Educació\\Asignaturas\\2DAM\\X.Proyecto Final\\DAM-ProyectoFinal-Desktop\\PlannerMate empleados\\PlannerMate empleados\\PlannerMate empleados.csproj",
+        "projectUniqueName": "C:\\Users\\andun\\Documents\\X.Proyecto Final\\DAM-ProyectoFinal-Desktop\\PlannerMate empleados\\PlannerMate empleados\\PlannerMate empleados.csproj",
         "projectName": "PlannerMate empleados",
-        "projectPath": "C:\\Users\\andun\\OneDrive - Conselleria d'Educació\\Asignaturas\\2DAM\\X.Proyecto Final\\DAM-ProyectoFinal-Desktop\\PlannerMate empleados\\PlannerMate empleados\\PlannerMate empleados.csproj",
+        "projectPath": "C:\\Users\\andun\\Documents\\X.Proyecto Final\\DAM-ProyectoFinal-Desktop\\PlannerMate empleados\\PlannerMate empleados\\PlannerMate empleados.csproj",
         "packagesPath": "C:\\Users\\andun\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\andun\\OneDrive - Conselleria d'Educació\\Asignaturas\\2DAM\\X.Proyecto Final\\DAM-ProyectoFinal-Desktop\\PlannerMate empleados\\PlannerMate empleados\\obj\\",
+        "outputPath": "C:\\Users\\andun\\Documents\\X.Proyecto Final\\DAM-ProyectoFinal-Desktop\\PlannerMate empleados\\PlannerMate empleados\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\andun\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -92,7 +92,8 @@
                 </Border.Effect>
 
                 <StackPanel Orientation="Vertical" >
-                    <Button Command="{Binding Path=AbrirCalendario}" Style="{StaticResource ResourceKey=CircularButtonStyle}" ToolTip="Calendario">
+                    <Button Command="{Binding Path=AbrirCalendario}" Style="{StaticResource ResourceKey=CircularButtonStyle}" 
+                            ToolTip="Calendario" Click="OcultarBotoneraGestion">
                         <Image Source="/Resources/calendario-de-fechas.png" Width="27" OpacityMask="Black">
 
                         </Image>
@@ -110,8 +111,10 @@
                         </Image>
                     </Button>
 
-                    <Button Command="{Binding Path=AbrirGestionDia}" Style="{StaticResource ResourceKey=CircularButtonStyle}" ToolTip="Trabajadores">
-                        <Image Source="/Resources/ruleta.png" Width="27">
+                    <Button Command="{Binding Path=AbrirGestionDia}" Style="{StaticResource ResourceKey=CircularButtonStyle}"
+                            ToolTip="Trabajadores" Click="OcultarBotoneraGestion">
+                        <Image Source="/Resources/ruleta.png" Width="27"
+                               >
 
                         </Image>
                     </Button>
@@ -123,7 +126,18 @@
                     Width="{Binding Source={x:Static SystemParameters.PrimaryScreenHeight}, Converter={tools:RatioConverter}, ConverterParameter='1.3' }"
                     Height="{Binding Source={x:Static SystemParameters.PrimaryScreenHeight}, Converter={tools:RatioConverter}, ConverterParameter='0.65' }" Margin="0,0,50,0" 
                     >
-                <ContentControl Content="{Binding Path=ContenidoPrincipal }"></ContentControl>
+                <!-- Botonera de gestión de día -->
+                <StackPanel>
+                    <StackPanel x:Name="BotoneraPanel" Orientation="Horizontal" Visibility="Collapsed">
+                        <Button Command="{Binding Path=AbrirAñadirCita}" Click="OcultarBotoneraGestion" Content="b" Width="30" Height="30"></Button>
+                        <Button Command="{Binding Path=AbrirAñadirCita}" Content="+" Width="30" Height="30"></Button>
+                        <Button Command="{Binding Path=AbrirAñadirCita}" Content="e" Width="30" Height="30"></Button>
+                        <Button Command="{Binding Path=AbrirAñadirCita}" Content="-" Width="30" Height="30"></Button>
+
+                    </StackPanel>
+                    <ContentControl Content="{Binding Path=ContenidoPrincipal }"></ContentControl>
+                </StackPanel>
+                
             </Border>
 
 

@@ -142,7 +142,7 @@ namespace PlannerMate_empleados.VMs
 
                 foreach (Cita cita in citasRest)
                 {
-                    if (cita.Fecha.Date == nuevoDia.Date.Date)
+                    if (cita.fecha.Date == nuevoDia.Date.Date)
                     {
                         nuevoDia.AddCita(cita);
                     }

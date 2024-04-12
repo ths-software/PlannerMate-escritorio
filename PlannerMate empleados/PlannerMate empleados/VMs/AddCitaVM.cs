@@ -46,6 +46,7 @@ namespace PlannerMate_empleados.VMs
             get => fechaConHora;
             set => SetProperty(ref fechaConHora, value);
         }
+        CitasRESTService RestService = new CitasRESTService();
 
         public AddCitaVM()
         {
@@ -55,14 +56,15 @@ namespace PlannerMate_empleados.VMs
 
         private void ValidarHora()
         {
-            string[] formatos = new string[] { "HH:mm:ss", "hh:mm:ss" };
+            string[] formatos = new string[] { "HH:mm:ss" };
 
             if (DateTime.TryParseExact(HoraToAdd, formatos, CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime hora))
             {
-                fechaConHora = new DateTime(CitaToAdd.Fecha.Year, CitaToAdd.Fecha.Month, CitaToAdd.Fecha.Day,
+                fechaConHora = new DateTime(DiaSeleccionado.Date.Year, DiaSeleccionado.Date.Month, DiaSeleccionado.Date.Day,
                                                      hora.Hour, hora.Minute, hora.Second);
+                
 
-                //MessageBox.Show($"Fecha con hora añadida: {fechaConHora}", "Resultado", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show($"Fecha con hora añadida: {fechaConHora}", "Resultado", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             else
             {
@@ -73,20 +75,32 @@ namespace PlannerMate_empleados.VMs
 
         private void AddCita()
         {
-            CitaToAdd.Fecha = FechaConHora;
-            Trabajador trandom = new Trabajador();
+            CitaToAdd.IdCita = 0;
+            CitaToAdd.fecha = FechaConHora;
 
-            if (CitaToAdd.Trabajador == null)
-            { CitaToAdd.Trabajador = trandom; }
+            Trabajador trabajador = new Trabajador();
+            trabajador.idTrabajador = 2;
 
-            if (string.IsNullOrEmpty(CitaToAdd.Nombre) /*|| CitaToAdd.Trabajador == null*/ ) //Trabajador a añadir
+            if (CitaToAdd.trabajador == null)
+            { 
+                CitaToAdd.trabajador = trabajador;
+
+                Trace.WriteLine($"TRABAJADOR NULL");
+
+                Trace.WriteLine($"Asignado trabajador: {CitaToAdd.trabajador}");
+            }
+
+            if (string.IsNullOrEmpty(CitaToAdd.nombre) /*|| CitaToAdd.Trabajador == null*/ ) //Trabajador a añadir
             {
                 MessageBox.Show("El campo nombre o trabajador seleccionado están vacíos", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
-            DiaSeleccionado.AddCita(CitaToAdd);
+            //DiaSeleccionado.AddCita(CitaToAdd);
 
-            System.Diagnostics.Debug.WriteLine(DiaSeleccionado.InfoCitas);
+            
+            RestService.PostCita(CitaToAdd);
+            Trace.WriteLine($"cita supuestamente añadida: {CitaToAdd.IdCita} {CitaToAdd.nombre} {CitaToAdd.descripcion}");
+            
         }
 
 

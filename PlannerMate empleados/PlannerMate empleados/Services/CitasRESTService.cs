@@ -6,9 +6,11 @@ using RestSharp;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace PlannerMate_empleados.Services
 {
@@ -32,6 +34,22 @@ namespace PlannerMate_empleados.Services
 
             // Deserializar la respuesta a ObservableCollection<Cita>
             return JsonConvert.DeserializeObject<ObservableCollection<Cita>>(contentWithoutTimeZone);
+        }
+
+        public RestResponse PostCita(Cita cita)
+        {
+            var client = new RestClient(@"http://localhost:8080/planner/datos");
+            var request = new RestRequest("citas", Method.Post);
+            string data = JsonConvert.SerializeObject(cita);
+
+            request.AddParameter("application/json",data,ParameterType.RequestBody);
+
+            var response = client.Execute(request);
+
+            Trace.WriteLine($"cita request: {response.Content} {response.ErrorException} {response.ErrorMessage}");
+            Trace.WriteLine($"data: {data}");
+
+            return response;
         }
 
     }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
@@ -10,50 +11,43 @@ namespace PlannerMate_empleados.Classes
     public class Trabajador
     {
         [Key]
-        public int IdTrabajador { get; set; }
-        public string Nombre { get; set; }
-        public string Contacto { get; set; }
+        public int idTrabajador { get; set; }
+        public string nombre { get; set; }
+        public string contacto { get; set; }
+
+        public ObservableCollection<Cita> Citas { get; set; }
+
 
         public Trabajador(int idTrabajador, string nombre, string contacto)
         {
-            IdTrabajador = idTrabajador;
-            Nombre = nombre;
-            Contacto = contacto;
+            Citas = new ObservableCollection<Cita>();
+            this.idTrabajador = idTrabajador;
+            this.nombre = nombre;
+            this.contacto = contacto;
         }
 
         public Trabajador()
         {
+            nombre = "vacio";
+            Citas = new ObservableCollection<Cita>();
         }
 
         public override bool Equals(object? obj)
         {
             return obj is Trabajador trabajador &&
-                   IdTrabajador == trabajador.IdTrabajador &&
-                   Nombre == trabajador.Nombre &&
-                   Contacto == trabajador.Contacto;
+                   idTrabajador == trabajador.idTrabajador &&
+                   nombre == trabajador.nombre &&
+                   contacto == trabajador.contacto;
         }
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(IdTrabajador, Nombre, Contacto);
+            return HashCode.Combine(idTrabajador, nombre, contacto);
         }
 
-        //public override bool Equals(object obj)
-        //{
-        //    if (obj == null || GetType() != obj.GetType())
-        //        return false;
-
-        //    Trabajador otroTrabajador = (Trabajador)obj;
-        //    return Nombre.Equals(otroTrabajador.Nombre);
-        //}
-
-        //public override int GetHashCode()
-        //{
-        //    return Nombre.GetHashCode();
-        //}
-
-
-
-
+        public override string ToString()
+        {
+            return nombre;
+        }
     }
 }

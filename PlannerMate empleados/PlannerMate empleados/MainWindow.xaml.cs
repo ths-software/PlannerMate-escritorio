@@ -61,5 +61,17 @@ namespace PlannerMate_empleados
         {
             WindowState = WindowState.Minimized;
         }
+
+        private void OcultarBotoneraGestion(object sender, RoutedEventArgs e)
+        {
+            if (BotoneraPanel.Visibility == Visibility.Visible)
+            {
+                BotoneraPanel.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                BotoneraPanel.Visibility = Visibility.Visible;
+            }
+        }
     }
 }

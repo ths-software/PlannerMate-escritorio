@@ -20,14 +20,7 @@
     <Grid>
         <StackPanel>
             <StackPanel>
-                <Border BorderBrush="Black" BorderThickness="0.2">
-                    <StackPanel Height="30" Background="White" Orientation="Horizontal">
-                        <Button Command="{Binding Path=AbrirAñadirCita}" Content="+" Width="30"></Button>
-                        <Button Content="" Width="30"></Button>
-                        <Button Content="" Width="30"></Button>
-                        <Button Content="" Width="30"></Button>
-                    </StackPanel>
-                </Border>
+                
                 <Border BorderBrush="Black" BorderThickness="0.2" Background="#FFC1C1C1">
                     <TextBlock Text="{Binding DiaSeleccionado, Converter={StaticResource EmptyValueConverter}}" />
                 </Border>
@@ -41,11 +34,11 @@
                                     <ColumnDefinition Width="Auto"/>
                                     <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
-                                <TextBlock Text="{Binding Trabajador.Nombre}" FontWeight="Bold" Margin="0,0,10,0"/>
+                                <TextBlock Text="{Binding nombre}" FontWeight="Bold" Margin="0,0,10,0"/>
                                 <ListBox Grid.Column="1" ItemsSource="{Binding Citas}" SelectionMode="Single">
                                     <ListBox.ItemTemplate>
                                         <DataTemplate>
-                                            <TextBlock Text="{Binding Descripcion}"/>
+                                            <TextBlock Text="{Binding descripcion}"/>
                                         </DataTemplate>
                                     </ListBox.ItemTemplate>
                                 </ListBox>

@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\andun\OneDrive - Conselleria d'Educació\Asignaturas\2DAM\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Debug\net6.0-windows\
+C:\Users\andun\Documents\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Debug\net6.0-windows\
 PlannerMate_empleados
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-C:\Users\andun\OneDrive - Conselleria d'Educació\Asignaturas\2DAM\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\App.xaml
+C:\Users\andun\Documents\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\App.xaml
 5-1040611797
 
 23-2100126612
 1971399012825
 MainWindow.xaml;Windows\AddCitaWin.xaml;Windows\Calendario.xaml;Windows\EditarCitaWin.xaml;Windows\GestionDia.xaml;
 
-True
+False
 

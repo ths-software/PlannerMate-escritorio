@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sA6GxawfF4xz4RifrDrgheaiugJ2RSa1Gfy0LFmfwt1Q57XGSf7A9SsYiZwdHa5NBYB78VIpelcVYrDnJPLCMA==",
+  "dgSpecHash": "7fCiTiNfTRlCpbZ+k7eOzjdix2ih7rPqPKP7ld/jS/Jc5j4aezUDXwGnFal1CmD88cP67NHhKS722Tf30Hzx5g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\andun\\OneDrive - Conselleria d'Educació\\Asignaturas\\2DAM\\X.Proyecto Final\\DAM-ProyectoFinal-Desktop\\PlannerMate empleados\\PlannerMate empleados\\PlannerMate empleados.csproj",
+  "projectFilePath": "C:\\Users\\andun\\Documents\\X.Proyecto Final\\DAM-ProyectoFinal-Desktop\\PlannerMate empleados\\PlannerMate empleados\\PlannerMate empleados.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\andun\\.nuget\\packages\\communitytoolkit.mvvm\\8.2.2\\communitytoolkit.mvvm.8.2.2.nupkg.sha512",
     "C:\\Users\\andun\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
