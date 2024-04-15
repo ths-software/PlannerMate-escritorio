@@ -6,9 +6,11 @@ using PlannerMate_empleados.Services;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using static PlannerMate_empleados.Services.DiaSeleccionadoMessage;
 using static PlannerMate_empleados.VMs.GestionDiaVM;
 
@@ -30,14 +32,30 @@ namespace PlannerMate_empleados.VMs
             set => SetProperty(ref trabajadoresConCitas, value);
         }
 
+        private Cita citaSeleccionada = new Cita();
+        public Cita CitaSeleccionada
+        {
+            get => citaSeleccionada;
+            set
+            {
+                SetProperty(ref citaSeleccionada, value);
+                Trace.WriteLine($"cita seleccionada");
+                EnviarCitaSeleccionada();
+            }
+        }
+
 
 
 
         public GestionDiaVM()
         {
 
-            DiaSeleccionado = WeakReferenceMessenger.Default.Send<DiaSeleccionadoRequest>(); // si no hago click en un dia, se rompe 
-            // como que no manda un mensaje y esto no recibe nada
+            try
+            {
+                DiaSeleccionado = WeakReferenceMessenger.Default.Send<DiaSeleccionadoRequest>(); // si no hago click en un dia, se rompe 
+            } // como que no manda un mensaje y esto no recibe nada
+            catch { }
+
 
 
             if (DiaSeleccionado != null)
@@ -62,6 +80,18 @@ namespace PlannerMate_empleados.VMs
 
 
             }
+        }
+
+        public void EnviarCitaSeleccionada()
+        {
+
+            WeakReferenceMessenger.Default.Reset();
+
+            WeakReferenceMessenger.Default.Register<GestionDiaVM, CitaSeleccionadaRequest>(this, (r, m) =>
+            {
+                m.Reply(r.CitaSeleccionada);
+            });
+
         }
     }
 }

@@ -22,7 +22,9 @@
             <StackPanel>
                 
                 <Border BorderBrush="Black" BorderThickness="0.2" Background="#FFC1C1C1">
-                    <TextBlock Text="{Binding DiaSeleccionado, Converter={StaticResource EmptyValueConverter}}" />
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding DiaSeleccionado, Converter={StaticResource EmptyValueConverter}}" />
+                    </StackPanel>
                 </Border>
             </StackPanel>
             <Border BorderBrush="Black" BorderThickness="0.2">
@@ -35,10 +37,17 @@
                                     <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
                                 <TextBlock Text="{Binding nombre}" FontWeight="Bold" Margin="0,0,10,0"/>
-                                <ListBox Grid.Column="1" ItemsSource="{Binding Citas}" SelectionMode="Single">
+                                <ListBox Grid.Column="1" ItemsSource="{Binding Citas}" SelectionMode="Single"
+                                         SelectedItem="{Binding DataContext.CitaSeleccionada, RelativeSource={RelativeSource AncestorType={x:Type ListBox}}}">
                                     <ListBox.ItemTemplate>
                                         <DataTemplate>
-                                            <TextBlock Text="{Binding descripcion}"/>
+                                            <TextBlock>
+                                                <Run Text="{Binding nombre}"></Run>
+                                                <Run Text=" "></Run>
+                                                <Run Text="{Binding fecha}"></Run>
+                                                <Run Text=" "></Run>
+                                                <Run Text="{Binding descripcion}"></Run>
+                                            </TextBlock>
                                         </DataTemplate>
                                     </ListBox.ItemTemplate>
                                 </ListBox>

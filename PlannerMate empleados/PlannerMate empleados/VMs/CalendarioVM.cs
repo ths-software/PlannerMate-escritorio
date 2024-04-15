@@ -42,7 +42,14 @@ namespace PlannerMate_empleados.VMs
         private DateTime displayedDate;
         public DateTime DisplayedDate
         {
-            get { return displayedDate; }
+            get {
+
+                TimeZoneInfo timeZone = TimeZoneInfo.Local;
+                TimeSpan offset = timeZone.GetUtcOffset(DateTime.Now);
+
+                return displayedDate;
+            
+            }
             set
             {
                 SetProperty(ref displayedDate, value);
@@ -72,19 +79,18 @@ namespace PlannerMate_empleados.VMs
             AdelantarMesCommand = new RelayCommand(AdelantarMes);
             AtrasarMesCommand = new RelayCommand(AtrasarMes);
 
+
+
+
             WeakReferenceMessenger.Default.Reset();
+
             WeakReferenceMessenger.Default.Register<CalendarioVM, DiaSeleccionadoRequest>(this, (r, m) =>
             {
                 m.Reply(r.DiaSeleccionado);
             });
-            
-            // tambien enviamos las citas del día,cuando le pasamos el day, entonces como es una lista de citas, si le hacemos un add
-            // también se actualizará
 
         }
 
-
-        // quizás sea buena idea que el usuario cambie de mes de otra forma, con un dropdown por ejemplo
         public void AtrasarMes()
         {
             DisplayedDate = DisplayedDate.AddMonths(-1);
@@ -97,10 +103,6 @@ namespace PlannerMate_empleados.VMs
 
         private void SelectDay(Day day)
         {
-            // Lógica de selección del día aquí (puedes agregar la lógica según las necesidades)
-            // Por ejemplo, puedes cambiar el color de fondo o realizar alguna acción específica
-            // Lógica para cambiar el estado de IsSelected cuando se selecciona un día
-            // el color del dia seleccionado se cambia segun si el dia es seleccionado o no, en el xaml
             foreach (var d in Days)
             {
                 d.IsSelected = d == day;

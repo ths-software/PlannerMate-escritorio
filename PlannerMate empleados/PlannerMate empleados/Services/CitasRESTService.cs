@@ -52,5 +52,15 @@ namespace PlannerMate_empleados.Services
             return response;
         }
 
+
+        public RestResponse DeleteCita(int id)
+        {
+            var cita = new RestClient(@"http://localhost:8080/planner/datos");
+            var request = new RestRequest($"citas/{id}", Method.Delete);
+            var response = cita.Execute(request);
+
+            return response;
+        }
+
     }
 }

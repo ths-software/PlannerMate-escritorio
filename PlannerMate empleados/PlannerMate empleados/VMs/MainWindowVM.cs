@@ -5,11 +5,15 @@ using PlannerMate_empleados.Classes;
 using PlannerMate_empleados.Services;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Navigation;
+using static PlannerMate_empleados.Services.DiaSeleccionadoMessage;
 
 namespace PlannerMate_empleados.VMs
 {
@@ -24,11 +28,26 @@ namespace PlannerMate_empleados.VMs
 
         public RelayCommand AbrirAñadirCita { get; }
 
+        public RelayCommand AbrirEliminarCita { get; }
+
+
+        private Cita citaSeleccionada = new Cita();
+        public Cita CitaSeleccionada // como los botones lo tenemos en el mainWindows, borraremos aqui la cita de la bd.
+        {
+            get => citaSeleccionada;
+            set
+            {
+                SetProperty(ref citaSeleccionada, value);
+            }
+        }
+
         public UserControl ContenidoPrincipal
         {
             get { return contenidoPrincipal; }
             set => SetProperty(ref contenidoPrincipal, value);
         }
+
+        CitasRESTService cService = new CitasRESTService();
 
         public MainWindowVM()
         {
@@ -36,6 +55,8 @@ namespace PlannerMate_empleados.VMs
             AbrirCalendario = new RelayCommand(CargarCalendario);
             AbrirGestionDia = new RelayCommand(CargarGestionDia);
             AbrirAñadirCita = new RelayCommand(CargarAddCita);
+            AbrirEliminarCita = new RelayCommand(EliminarCita);
+
         }
 
 
@@ -53,6 +74,32 @@ namespace PlannerMate_empleados.VMs
         public void CargarAddCita()
         {
             ContenidoPrincipal = NavigationServices.LoadAddCita();
+        }
+
+        public void EliminarCita()
+        {
+
+            CitaSeleccionada = WeakReferenceMessenger.Default.Send<CitaSeleccionadaRequest>();
+
+            if (CitaSeleccionada != null)
+            {
+                MessageBoxResult result = MessageBox.Show("¿Estás seguro de que deseas eliminar esta cita?", "Confirmación de eliminación", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                MessageBox.Show("Cita Eliminada","Correcto", MessageBoxButton.OK, MessageBoxImage.Information);
+
+
+
+                if (result == MessageBoxResult.Yes)
+                {
+                    cService.DeleteCita(CitaSeleccionada.IdCita);
+
+
+                    ContenidoPrincipal = NavigationServices.LoadCalendario();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Debes seleccionar una cita primero.");
+            }
         }
     }
 }

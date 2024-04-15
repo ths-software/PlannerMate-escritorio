@@ -132,7 +132,7 @@
                         <Button Command="{Binding Path=AbrirAñadirCita}" Click="OcultarBotoneraGestion" Content="b" Width="30" Height="30"></Button>
                         <Button Command="{Binding Path=AbrirAñadirCita}" Content="+" Width="30" Height="30"></Button>
                         <Button Command="{Binding Path=AbrirAñadirCita}" Content="e" Width="30" Height="30"></Button>
-                        <Button Command="{Binding Path=AbrirAñadirCita}" Content="-" Width="30" Height="30"></Button>
+                        <Button Command="{Binding Path=AbrirEliminarCita}" Content="-" Width="30" Height="30"></Button>
 
                     </StackPanel>
                     <ContentControl Content="{Binding Path=ContenidoPrincipal }"></ContentControl>

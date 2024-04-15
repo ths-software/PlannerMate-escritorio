@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PlannerMate_empleados.Windows"
              mc:Ignorable="d" 
-             d:DesignHeight="600" d:DesignWidth="550">
+             d:DesignHeight="600" d:DesignWidth="600">
 
     <UserControl.Resources>
 
@@ -34,18 +34,24 @@
 
     </UserControl.Resources>
     
-    <DockPanel LastChildFill="True">
+    <DockPanel LastChildFill="True" Background="White">
         <StackPanel DockPanel.Dock="Top">
-            <TextBlock Text="{Binding DiaSeleccionado.DayNumber}" FontSize="20" Margin="20,0,0,0"></TextBlock>
+            <TextBlock FontSize="20" Margin="20,0,0,0">
+                <Run Text="Día Seleccionado: "></Run>
+                <Run Text="{Binding DiaSeleccionado.DayNumber}"></Run>
+            </TextBlock>
         </StackPanel>
         <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" HorizontalAlignment="Right"
                     Height="70">
             <Button Content="Cancelar"></Button>
             <Button Command="{Binding AddCitaCommand}" Content="Aceptar"></Button>
         </StackPanel>
-        <StackPanel>
-            <TextBlock Text="IdCita: 0" Margin="24,0,0,0"></TextBlock>
 
+        <StackPanel DockPanel.Dock="Right">
+            
+        </StackPanel>
+
+        <StackPanel>
             <StackPanel Style="{StaticResource stack1}">
                 <TextBlock Text="Nombre"></TextBlock>
                 <TextBox Text="{Binding Path=CitaToAdd.nombre}"></TextBox>
@@ -66,12 +72,10 @@
                 <TextBox Text="{Binding CitaToAdd.descripcion}"></TextBox>
             </StackPanel>
             <StackPanel Style="{StaticResource stack1}">
-                <TextBlock Text="peluquero (quizás hacer un dropdown)"></TextBlock>
-                <TextBox></TextBox>
-            </StackPanel>
-            <StackPanel Style="{StaticResource stack1}">
-                <TextBlock Text="Cliente (opcional, pensar un método para que cuadre con los clientes)"></TextBlock>
-                <TextBox></TextBox>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Peluquero:" VerticalAlignment="Center" Width="100"></TextBlock>
+                    <ComboBox ItemsSource="{Binding TrabajadoresRest}" SelectedItem="{Binding TrabajadorSeleccionado}" DisplayMemberPath="nombre"/>
+                </StackPanel>
             </StackPanel>
 
         </StackPanel>

@@ -5,6 +5,7 @@ using PlannerMate_empleados.Classes;
 using PlannerMate_empleados.Services;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
@@ -31,6 +32,8 @@ namespace PlannerMate_empleados.VMs
             set => SetProperty(ref citaToAdd, value);
         }
 
+        
+
         public RelayCommand AddCitaCommand { get; }
 
         private string horaToAdd;
@@ -46,25 +49,62 @@ namespace PlannerMate_empleados.VMs
             get => fechaConHora;
             set => SetProperty(ref fechaConHora, value);
         }
-        CitasRESTService RestService = new CitasRESTService();
+        CitasRESTService cRestService = new CitasRESTService();
+
+        TrabajadoresRESTService tRestService = new TrabajadoresRESTService();
+
+        private Trabajador trabajadorSeleccionado;
+        public Trabajador TrabajadorSeleccionado
+        {
+            get => trabajadorSeleccionado;
+            set => SetProperty(ref trabajadorSeleccionado, value);
+        }
+        private ObservableCollection<Trabajador> trabajadoresRest;
+        public ObservableCollection<Trabajador> TrabajadoresRest
+        {
+            get => trabajadoresRest;
+            set=> SetProperty(ref trabajadoresRest, value);
+        }
+
+
 
         public AddCitaVM()
         {
-            DiaSeleccionado = WeakReferenceMessenger.Default.Send<DiaSeleccionadoRequest>();
+            tRestService = new TrabajadoresRESTService();
+            TrabajadoresRest = tRestService.GetTrabajadores();
+
+            if(DiaSeleccionado==null)
+            {
+                try
+                {
+                    DiaSeleccionado = WeakReferenceMessenger.Default.Send<DiaSeleccionadoRequest>();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ha ocurrido un error al obtener el día seleccionado. Detalles del error: " + ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
+
             AddCitaCommand = new RelayCommand(AddCita);
+
         }
 
         private void ValidarHora()
         {
+            TimeZoneInfo tmi = TimeZoneInfo.Local;
+
+
             string[] formatos = new string[] { "HH:mm:ss" };
 
-            if (DateTime.TryParseExact(HoraToAdd, formatos, CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime hora))
+            if (DateTime.TryParseExact(HoraToAdd, formatos, CultureInfo.CurrentCulture, DateTimeStyles.AssumeLocal, out DateTime hora))
             {
-                fechaConHora = new DateTime(DiaSeleccionado.Date.Year, DiaSeleccionado.Date.Month, DiaSeleccionado.Date.Day,
-                                                     hora.Hour, hora.Minute, hora.Second);
-                
 
-                MessageBox.Show($"Fecha con hora añadida: {fechaConHora}", "Resultado", MessageBoxButton.OK, MessageBoxImage.Information);
+                DateTime fechaActual = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, tmi);
+                bool esHorarioVerano = tmi.IsDaylightSavingTime(fechaActual);
+                int ajusteHora = esHorarioVerano ? 2 : 1;
+
+                fechaConHora = new DateTime(DiaSeleccionado.Date.Year, DiaSeleccionado.Date.Month, DiaSeleccionado.Date.Day,
+                                                     hora.Hour + ajusteHora, hora.Minute, hora.Second);
             }
             else
             {
@@ -78,19 +118,16 @@ namespace PlannerMate_empleados.VMs
             CitaToAdd.IdCita = 0;
             CitaToAdd.fecha = FechaConHora;
 
-            Trabajador trabajador = new Trabajador();
-            trabajador.idTrabajador = 2;
-
             if (CitaToAdd.trabajador == null)
             { 
-                CitaToAdd.trabajador = trabajador;
+                CitaToAdd.trabajador = TrabajadorSeleccionado;
 
                 Trace.WriteLine($"TRABAJADOR NULL");
 
                 Trace.WriteLine($"Asignado trabajador: {CitaToAdd.trabajador}");
             }
 
-            if (string.IsNullOrEmpty(CitaToAdd.nombre) /*|| CitaToAdd.Trabajador == null*/ ) //Trabajador a añadir
+            if (string.IsNullOrEmpty(CitaToAdd.nombre) || CitaToAdd.trabajador == null) //Trabajador a añadir
             {
                 MessageBox.Show("El campo nombre o trabajador seleccionado están vacíos", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
@@ -98,8 +135,10 @@ namespace PlannerMate_empleados.VMs
             //DiaSeleccionado.AddCita(CitaToAdd);
 
             
-            RestService.PostCita(CitaToAdd);
-            Trace.WriteLine($"cita supuestamente añadida: {CitaToAdd.IdCita} {CitaToAdd.nombre} {CitaToAdd.descripcion}");
+            cRestService.PostCita(CitaToAdd);
+            MessageBox.Show("Cita añadida", "Confirmación", MessageBoxButton.OK, MessageBoxImage.Information);
+
+            CitaToAdd = new Cita();
             
         }
 

@@ -81,7 +81,8 @@ namespace PlannerMate_empleados.Classes
             {
                 for(int i = 0; i < 4; i++)
                 {
-                    sb.Append($"{Citas[i].nombre}: {Citas[i].descripcion} {Citas[i].fecha.Hour}:{Citas[i].fecha.Minute}\n");
+                    string horaFormateada = Citas[i].fecha.ToString("HH:mm");
+                    sb.Append($"{Citas[i].nombre}: {Citas[i].descripcion} {horaFormateada}\n");
                 }
                 sb.Append("   ...");
             }
@@ -89,7 +90,8 @@ namespace PlannerMate_empleados.Classes
             {
                 foreach (Cita cita in Citas)
                 {
-                    sb.Append($"{cita.nombre}: {cita.descripcion} {cita.fecha.Hour}:{cita.fecha.Minute}\n");
+                    string horaFormateada = cita.fecha.ToString("HH:mm");
+                    sb.Append($"{cita.nombre}: {cita.descripcion} {horaFormateada}\n");
                 }
             }
 

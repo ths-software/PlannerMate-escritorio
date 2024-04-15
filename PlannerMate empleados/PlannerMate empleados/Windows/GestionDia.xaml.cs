@@ -1,4 +1,5 @@
-﻿using PlannerMate_empleados.VMs;
+﻿using PlannerMate_empleados.Classes;
+using PlannerMate_empleados.VMs;
 using System;
 using System.Collections.Generic;
 using System.Linq;

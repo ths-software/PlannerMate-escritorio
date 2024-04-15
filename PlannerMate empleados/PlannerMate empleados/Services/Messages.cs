@@ -2,6 +2,7 @@
 using PlannerMate_empleados.Classes;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,7 +17,10 @@ namespace PlannerMate_empleados.Services
 
         }
 
-        //solicitud
+        //solicitudes
         public class DiaSeleccionadoRequest : RequestMessage<Day> { }
+        public class TrabajadoresRequest : RequestMessage<ObservableCollection<Trabajador>> { }
+
+        public class CitaSeleccionadaRequest : RequestMessage<Cita> { }
     }
 }
