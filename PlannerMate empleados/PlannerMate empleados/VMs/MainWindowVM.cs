@@ -3,6 +3,7 @@ using CommunityToolkit.Mvvm.Input;
 using CommunityToolkit.Mvvm.Messaging;
 using PlannerMate_empleados.Classes;
 using PlannerMate_empleados.Services;
+using PlannerMate_empleados.Windows;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -20,7 +21,31 @@ namespace PlannerMate_empleados.VMs
     class MainWindowVM : ObservableObject
     {
         private UserControl contenidoPrincipal;
+        public UserControl ContenidoPrincipal
+        {
+            get { return contenidoPrincipal; }
+            set
+            {
+                SetProperty(ref contenidoPrincipal, value);
 
+                if (ContenidoPrincipal is GestionDia)
+                {
+                    BotoneraVisibilidad = "Visible";
+                }
+                else
+                {
+                    BotoneraVisibilidad = "Collapsed";
+                }
+
+            }
+        }
+
+        private string botoneraVisibilidad;
+        public string BotoneraVisibilidad
+        {
+            get => botoneraVisibilidad;
+            set => SetProperty(ref botoneraVisibilidad,value);
+        }
 
         public RelayCommand AbrirCalendario { get; }
 
@@ -28,7 +53,11 @@ namespace PlannerMate_empleados.VMs
 
         public RelayCommand AbrirAñadirCita { get; }
 
+        public RelayCommand AbrirEditarCita { get; }
+
         public RelayCommand AbrirEliminarCita { get; }
+
+        public RelayCommand AbrirTrabajadores {  get; }
 
 
         private Cita citaSeleccionada = new Cita();
@@ -41,11 +70,7 @@ namespace PlannerMate_empleados.VMs
             }
         }
 
-        public UserControl ContenidoPrincipal
-        {
-            get { return contenidoPrincipal; }
-            set => SetProperty(ref contenidoPrincipal, value);
-        }
+        
 
         CitasRESTService cService = new CitasRESTService();
 
@@ -55,7 +80,9 @@ namespace PlannerMate_empleados.VMs
             AbrirCalendario = new RelayCommand(CargarCalendario);
             AbrirGestionDia = new RelayCommand(CargarGestionDia);
             AbrirAñadirCita = new RelayCommand(CargarAddCita);
+            AbrirEditarCita = new RelayCommand(CargarEditarCita);
             AbrirEliminarCita = new RelayCommand(EliminarCita);
+            AbrirTrabajadores = new RelayCommand(CargarTrabajadores);
 
         }
 
@@ -75,31 +102,50 @@ namespace PlannerMate_empleados.VMs
         {
             ContenidoPrincipal = NavigationServices.LoadAddCita();
         }
-
+        public void CargarEditarCita()
+        {
+            ContenidoPrincipal = NavigationServices.LoadEditarCita();
+        }
         public void EliminarCita()
         {
 
-            CitaSeleccionada = WeakReferenceMessenger.Default.Send<CitaSeleccionadaRequest>();
-
-            if (CitaSeleccionada != null)
+            try
             {
-                MessageBoxResult result = MessageBox.Show("¿Estás seguro de que deseas eliminar esta cita?", "Confirmación de eliminación", MessageBoxButton.YesNo, MessageBoxImage.Question);
-                MessageBox.Show("Cita Eliminada","Correcto", MessageBoxButton.OK, MessageBoxImage.Information);
+                CitaSeleccionada = WeakReferenceMessenger.Default.Send<CitaSeleccionadaRequest>();
 
-
-
-                if (result == MessageBoxResult.Yes)
+                if (CitaSeleccionada != null)
                 {
-                    cService.DeleteCita(CitaSeleccionada.IdCita);
+                    MessageBoxResult result = MessageBox.Show("¿Estás seguro de que deseas eliminar esta cita?", "Confirmación de eliminación", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                    
 
 
-                    ContenidoPrincipal = NavigationServices.LoadCalendario();
+
+                    if (result == MessageBoxResult.Yes)
+                    {
+                        cService.DeleteCita(CitaSeleccionada.idCita);
+
+                        MessageBox.Show("Cita Eliminada", "Correcto", MessageBoxButton.OK, MessageBoxImage.Information);
+
+                        ContenidoPrincipal = NavigationServices.LoadCalendario();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Debes seleccionar una cita primero.");
                 }
             }
-            else
+            catch
             {
-                MessageBox.Show("Debes seleccionar una cita primero.");
+                MessageBox.Show("Ninguna cita seleccionada o ocurrió un error en el proceso","Error",MessageBoxButton.OK,MessageBoxImage.Error);
             }
+
+            
+        }
+
+
+        public void CargarTrabajadores()
+        {
+            ContenidoPrincipal = NavigationServices.LoadTrabajadores();
         }
     }
 }

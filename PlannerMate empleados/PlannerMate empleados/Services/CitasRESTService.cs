@@ -52,6 +52,20 @@ namespace PlannerMate_empleados.Services
             return response;
         }
 
+        public RestResponse PutCita(Cita cita)
+        {
+            var client = new RestClient(@"http://localhost:8080/planner/datos");
+            var request = new RestRequest($"citas", Method.Put);
+            string data = JsonConvert.SerializeObject(cita);
+            request.AddParameter ("application/json",data,ParameterType.RequestBody);
+            var response = client.Execute(request);
+
+            Trace.WriteLine($"cita request: {response.Content} {response.ErrorException} {response.ErrorMessage}");
+            Trace.WriteLine($"data: {data}");
+
+            return response;
+        }
+
 
         public RestResponse DeleteCita(int id)
         {

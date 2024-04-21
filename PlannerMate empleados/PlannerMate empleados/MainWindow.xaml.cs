@@ -1,7 +1,9 @@
-﻿using PlannerMate_empleados.VMs;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using PlannerMate_empleados.VMs;
 using PlannerMate_empleados.Windows;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -60,18 +62,6 @@ namespace PlannerMate_empleados
         private void MinimizeButton_Click(object sender, RoutedEventArgs e)
         {
             WindowState = WindowState.Minimized;
-        }
-
-        private void OcultarBotoneraGestion(object sender, RoutedEventArgs e)
-        {
-            if (BotoneraPanel.Visibility == Visibility.Visible)
-            {
-                BotoneraPanel.Visibility = Visibility.Collapsed;
-            }
-            else
-            {
-                BotoneraPanel.Visibility = Visibility.Visible;
-            }
         }
     }
 }

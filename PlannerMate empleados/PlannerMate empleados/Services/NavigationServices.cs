@@ -14,28 +14,20 @@ namespace PlannerMate_empleados.Services
     {
         //public static UserControl LoadGestionDia() => new GestionDia();
 
+        private static UserControl Trabajadores = null;
+        private static UserControl Clientes = null;
 
-        public static UserControl LoadCalendario()
-        {
-            return new Calendario();
-        }
+        public static UserControl LoadCalendario() => new Calendario();
 
-        public static UserControl LoadGestionDia()
-        {
-            return new GestionDia();
-        }
+        public static UserControl LoadGestionDia() => new GestionDia();
 
-        //public static void LoadAddCita()
-        //{
-        //    AddCitaWin addCitaWin = new AddCitaWin();
-        //    addCitaWin.Show();
-        //}
-
-        public static UserControl LoadAddCita()
-        {
-            return new AddCitaWin();
-        }
+        public static UserControl LoadAddCita() => new AddCitaWin();
 
 
+        public static UserControl LoadTrabajadores() => Trabajadores == null ? new TrabajadoresWin() : Trabajadores;
+
+        public static UserControl LoadClientes() => Clientes == null ? new ClientesWin() : Clientes;
+
+        public static UserControl LoadEditarCita() => new EditarCitaWin();
     }
 }

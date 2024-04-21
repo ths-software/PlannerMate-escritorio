@@ -10,7 +10,7 @@ namespace PlannerMate_empleados.Classes
 {
     public class Cita
     {
-        public int IdCita { get; set; }
+        public int idCita { get; set; }
         public string nombre { get; set; }
         public string contacto { get; set; }
         public DateTime fecha { get; set; }
@@ -20,7 +20,7 @@ namespace PlannerMate_empleados.Classes
 
         public Cita(int idCita, string nombre, string contacto, DateTime fecha, string descripcion, Trabajador trabajador, Cliente cliente)
         {
-            IdCita = idCita;
+            this.idCita = idCita;
             this.nombre = nombre;
             this.contacto = contacto;
             this.fecha = fecha;

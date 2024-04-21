@@ -39,8 +39,14 @@ namespace PlannerMate_empleados.VMs
             set
             {
                 SetProperty(ref citaSeleccionada, value);
-                Trace.WriteLine($"cita seleccionada");
+
                 EnviarCitaSeleccionada();
+
+                //WeakReferenceMessenger.Default.Reset();
+                WeakReferenceMessenger.Default.Register<GestionDiaVM, DiaSeleccionadoRequest>(this, (r, m) =>
+                {
+                    m.Reply(r.DiaSeleccionado);
+                });
             }
         }
 

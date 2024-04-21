@@ -11,6 +11,7 @@
   <ItemGroup>
     <None Remove="Resources\calendario-de-fechas.png" />
     <None Remove="Resources\clients.png" />
+    <None Remove="Resources\lapiz.png" />
     <None Remove="Resources\perfil.png" />
     <None Remove="Resources\ruleta.png" />
     <None Remove="Resources\trabajadores.png" />
@@ -25,6 +26,7 @@
   <ItemGroup>
     <Resource Include="Resources\calendario-de-fechas.png" />
     <Resource Include="Resources\clients.png" />
+    <Resource Include="Resources\lapiz.png" />
     <Resource Include="Resources\perfil.png" />
     <Resource Include="Resources\ruleta.png" />
     <Resource Include="Resources\trabajadores.png" />

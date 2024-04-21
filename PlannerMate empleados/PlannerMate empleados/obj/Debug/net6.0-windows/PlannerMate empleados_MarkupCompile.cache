@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\andun\Documents\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\App.xaml
-5-1040611797
+72141547779
 
-22-1756566457
+28-1080284174
 1971399012825
-MainWindow.xaml;Windows\AddCitaWin.xaml;Windows\Calendario.xaml;Windows\EditarCitaWin.xaml;Windows\GestionDia.xaml;
+MainWindow.xaml;Windows\AddCitaWin.xaml;Windows\Calendario.xaml;Windows\ClientesWin.xaml;Windows\EditarCitaWin.xaml;Windows\GestionDia.xaml;Windows\TrabajadoresWin.xaml;
 
 False
 

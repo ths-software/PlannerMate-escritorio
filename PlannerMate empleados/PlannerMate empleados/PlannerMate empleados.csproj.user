@@ -13,10 +13,16 @@
     <Compile Update="Windows\Calendario.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Windows\ClientesWin.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Windows\EditarCitaWin.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Windows\GestionDia.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\TrabajadoresWin.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -30,10 +36,16 @@
     <Page Update="Windows\Calendario.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Windows\ClientesWin.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Windows\EditarCitaWin.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Windows\GestionDia.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\TrabajadoresWin.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

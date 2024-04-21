@@ -23,11 +23,11 @@
                 
                 <Border BorderBrush="Black" BorderThickness="0.2" Background="#FFC1C1C1">
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="{Binding DiaSeleccionado, Converter={StaticResource EmptyValueConverter}}" />
+                        <TextBlock Text="{Binding DiaSeleccionado, Converter={StaticResource EmptyValueConverter}}" FontSize="20" />
                     </StackPanel>
                 </Border>
             </StackPanel>
-            <Border BorderBrush="Black" BorderThickness="0.2">
+            <Border BorderBrush="Black" MinHeight="350" BorderThickness="0.2">
                 <ListBox ItemsSource="{Binding TrabajadoresConCitas}" SelectionMode="Extended">
                     <ListBox.ItemTemplate>
                         <DataTemplate>

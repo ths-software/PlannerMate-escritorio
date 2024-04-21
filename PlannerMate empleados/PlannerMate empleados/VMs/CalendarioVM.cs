@@ -82,12 +82,12 @@ namespace PlannerMate_empleados.VMs
 
 
 
-            WeakReferenceMessenger.Default.Reset();
+            //WeakReferenceMessenger.Default.Reset();
 
-            WeakReferenceMessenger.Default.Register<CalendarioVM, DiaSeleccionadoRequest>(this, (r, m) =>
-            {
-                m.Reply(r.DiaSeleccionado);
-            });
+            //WeakReferenceMessenger.Default.Register<CalendarioVM, DiaSeleccionadoRequest>(this, (r, m) =>
+            //{
+            //    m.Reply(r.DiaSeleccionado);
+            //});
 
         }
 
@@ -110,7 +110,7 @@ namespace PlannerMate_empleados.VMs
 
             DiaSeleccionado = day;
 
-           WeakReferenceMessenger.Default.Reset();
+            WeakReferenceMessenger.Default.Reset();
             WeakReferenceMessenger.Default.Register<CalendarioVM, DiaSeleccionadoRequest>(this, (r, m) =>
             {
                 m.Reply(r.DiaSeleccionado);

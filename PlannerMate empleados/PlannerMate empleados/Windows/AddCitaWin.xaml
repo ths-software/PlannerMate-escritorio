@@ -73,7 +73,7 @@
             </StackPanel>
             <StackPanel Style="{StaticResource stack1}">
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="Peluquero:" VerticalAlignment="Center" Width="100"></TextBlock>
+                    <TextBlock Text="Peluquer@:" VerticalAlignment="Center" Width="100"></TextBlock>
                     <ComboBox ItemsSource="{Binding TrabajadoresRest}" SelectedItem="{Binding TrabajadorSeleccionado}" DisplayMemberPath="nombre"/>
                 </StackPanel>
             </StackPanel>

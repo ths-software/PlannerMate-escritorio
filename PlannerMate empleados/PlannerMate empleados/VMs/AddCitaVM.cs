@@ -101,10 +101,10 @@ namespace PlannerMate_empleados.VMs
 
                 DateTime fechaActual = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, tmi);
                 bool esHorarioVerano = tmi.IsDaylightSavingTime(fechaActual);
-                int ajusteHora = esHorarioVerano ? 2 : 1;
+                int ajusteHora = esHorarioVerano ? 2 : 1;   // esta parte de horarios no hace falta, habia un error con los campos y me la ponía mal
 
                 fechaConHora = new DateTime(DiaSeleccionado.Date.Year, DiaSeleccionado.Date.Month, DiaSeleccionado.Date.Day,
-                                                     hora.Hour + ajusteHora, hora.Minute, hora.Second);
+                                                     hora.Hour, hora.Minute, hora.Second);
             }
             else
             {
@@ -115,7 +115,7 @@ namespace PlannerMate_empleados.VMs
 
         private void AddCita()
         {
-            CitaToAdd.IdCita = 0;
+            CitaToAdd.idCita = 0;
             CitaToAdd.fecha = FechaConHora;
 
             if (CitaToAdd.trabajador == null)
