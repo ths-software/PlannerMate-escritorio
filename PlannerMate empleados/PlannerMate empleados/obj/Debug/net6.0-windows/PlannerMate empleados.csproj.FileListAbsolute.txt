@@ -106,3 +106,7 @@ C:\Users\andun\Documents\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate 
 C:\Users\andun\Documents\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Debug\net6.0-windows\Windows\TrabajadoresWin.baml
 C:\Users\andun\Documents\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Debug\net6.0-windows\Windows\ClientesWin.g.cs
 C:\Users\andun\Documents\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Debug\net6.0-windows\Windows\ClientesWin.baml
+C:\Users\andun\Documents\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Debug\net6.0-windows\Windows\AddClienteWin.g.cs
+C:\Users\andun\Documents\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Debug\net6.0-windows\Windows\EditarClienteWin.g.cs
+C:\Users\andun\Documents\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Debug\net6.0-windows\Windows\AddClienteWin.baml
+C:\Users\andun\Documents\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Debug\net6.0-windows\Windows\EditarClienteWin.baml

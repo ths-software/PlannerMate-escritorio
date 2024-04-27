@@ -29,5 +29,9 @@ namespace PlannerMate_empleados.Services
         public static UserControl LoadClientes() => Clientes == null ? new ClientesWin() : Clientes;
 
         public static UserControl LoadEditarCita() => new EditarCitaWin();
+
+
+        public static UserControl LoadAddCliente() => new AddClienteWin();
+        public static UserControl LoadEditarCliente() => new EditarClienteWin();
     }
 }

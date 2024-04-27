@@ -22,16 +22,24 @@ namespace PlannerMate_empleados.Services
         {
             var client = new RestClient(@"http://localhost:8080/planner/datos");
             var request = new RestRequest("citas",Method.Get); // podria hacer un try catch para capturar que este online o no
+            string contentWithoutTimeZone = "";
 
+            try
+            {
+                var response = client.Get(request);
+                var format = "yyyy-MM-dd HH:mm:ss";
+                var dateTimeConverter = new IsoDateTimeConverter { DateTimeFormat = format };
 
-            var response = client.Get(request);
+                // Remover el sufijo de zona horaria [UTC]
+                contentWithoutTimeZone = response.Content.Replace("[UTC]", "");
 
-            var format = "yyyy-MM-dd HH:mm:ss";
-            var dateTimeConverter = new IsoDateTimeConverter { DateTimeFormat = format };
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error",$"Error al conectarse con la base de datos {ex}",MessageBoxButton.OK,MessageBoxImage.Error);
+            }
 
-            // Remover el sufijo de zona horaria [UTC]
-            string contentWithoutTimeZone = response.Content.Replace("[UTC]", "");
-
+            
             // Deserializar la respuesta a ObservableCollection<Cita>
             return JsonConvert.DeserializeObject<ObservableCollection<Cita>>(contentWithoutTimeZone);
         }

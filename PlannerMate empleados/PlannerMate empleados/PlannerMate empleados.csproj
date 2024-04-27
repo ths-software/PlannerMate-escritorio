@@ -9,9 +9,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\agregar.png" />
+    <None Remove="Resources\basura.png" />
     <None Remove="Resources\calendario-de-fechas.png" />
     <None Remove="Resources\clients.png" />
+    <None Remove="Resources\editar.png" />
+    <None Remove="Resources\flecha-derecha.png" />
+    <None Remove="Resources\flecha-izquierda.png" />
+    <None Remove="Resources\hombre.png" />
     <None Remove="Resources\lapiz.png" />
+    <None Remove="Resources\mujer.png" />
     <None Remove="Resources\perfil.png" />
     <None Remove="Resources\ruleta.png" />
     <None Remove="Resources\trabajadores.png" />
@@ -24,9 +31,16 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Resources\agregar.png" />
+    <Resource Include="Resources\basura.png" />
     <Resource Include="Resources\calendario-de-fechas.png" />
     <Resource Include="Resources\clients.png" />
+    <Resource Include="Resources\editar.png" />
+    <Resource Include="Resources\flecha-derecha.png" />
+    <Resource Include="Resources\flecha-izquierda.png" />
+    <Resource Include="Resources\hombre.png" />
     <Resource Include="Resources\lapiz.png" />
+    <Resource Include="Resources\mujer.png" />
     <Resource Include="Resources\perfil.png" />
     <Resource Include="Resources\ruleta.png" />
     <Resource Include="Resources\trabajadores.png" />

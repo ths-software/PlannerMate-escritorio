@@ -19,7 +19,7 @@ namespace PlannerMate_empleados.Converters
             }
             else
             {
-                return value;
+                return $"Día seleccionado: {value}";
             }
         }
 

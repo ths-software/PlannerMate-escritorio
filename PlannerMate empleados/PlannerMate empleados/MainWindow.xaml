@@ -98,7 +98,7 @@
 
                         </Image>
                     </Button>
-                    <Button Style="{StaticResource ResourceKey=CircularButtonStyle}" ToolTip="Clientes" >
+                    <Button Command="{Binding AbrirClientes}" Style="{StaticResource ResourceKey=CircularButtonStyle}" ToolTip="Clientes" >
                         <Image Source="/Resources/clients.png" Width="34">
 
                         </Image>
@@ -128,11 +128,24 @@
                     >
                 <!-- Botonera de gestión de día -->
                 <StackPanel>
-                    <StackPanel x:Name="BotoneraPanel" Orientation="Horizontal" Visibility="{Binding Path=BotoneraVisibilidad}">
+                    <StackPanel x:Name="BotoneraPanel" Orientation="Horizontal" Visibility="{Binding Path=BotoneraVisibilidad}"
+                                Background="#FFB5B5B5">
                         <!--<Button Command="{Binding Path=AbrirAñadirCita}" Content="b" Width="30" Height="30"></Button>-->
-                        <Button Command="{Binding Path=AbrirAñadirCita}" Content="+" Width="30" Height="30"></Button>
-                        <Button Command="{Binding Path=AbrirEditarCita}" Content="e" Width="30" Height="30"></Button>
-                        <Button Command="{Binding Path=AbrirEliminarCita}" Content="-" Width="30" Height="30"></Button>
+                        <Button Command="{Binding Path=AbrirAñadir}" Width="30" Height="30" ToolTip="Agregar">
+                            <Image Source="/Resources/agregar.png">
+                                
+                            </Image>
+                        </Button>
+                        <Button Command="{Binding Path=AbrirEditar}" Width="30" Height="30" ToolTip="Editar">
+                            <Image Source="/Resources/editar.png">
+
+                            </Image>
+                        </Button>
+                        <Button Command="{Binding Path=AbrirEliminar}" Width="30" Height="30" ToolTip="Eliminar">
+                            <Image Source="/Resources/basura.png">
+
+                            </Image>
+                        </Button>
 
                     </StackPanel>
                     <ContentControl Content="{Binding Path=ContenidoPrincipal }"></ContentControl>

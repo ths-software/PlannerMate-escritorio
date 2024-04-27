@@ -66,7 +66,12 @@ namespace PlannerMate_empleados.VMs
             set=> SetProperty(ref trabajadoresRest, value);
         }
 
-
+        private string visibilidad = "Visible";
+        public string Visibilidad
+        {
+            get => visibilidad;
+            set => SetProperty(ref visibilidad, value);
+        }
 
         public AddCitaVM()
         {
@@ -82,6 +87,8 @@ namespace PlannerMate_empleados.VMs
                 catch (Exception ex)
                 {
                     MessageBox.Show("Ha ocurrido un error al obtener el día seleccionado. Detalles del error: " + ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    Visibilidad = "Collapsed";
+                    return;
                 }
             }
 

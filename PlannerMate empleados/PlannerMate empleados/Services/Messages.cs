@@ -22,5 +22,7 @@ namespace PlannerMate_empleados.Services
         public class TrabajadoresRequest : RequestMessage<ObservableCollection<Trabajador>> { }
 
         public class CitaSeleccionadaRequest : RequestMessage<Cita> { }
+        public class CitasRequest : RequestMessage<ObservableCollection<Cita>> { }
+        public class ClienteSeleccionadoRequest : RequestMessage<Cliente> { }
     }
 }

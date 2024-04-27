@@ -63,6 +63,26 @@ namespace PlannerMate_empleados.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Byte[].
         /// </summary>
+        internal static byte[] agregar {
+            get {
+                object obj = ResourceManager.GetObject("agregar", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] basura {
+            get {
+                object obj = ResourceManager.GetObject("basura", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
         internal static byte[] calendario_de_fechas {
             get {
                 object obj = ResourceManager.GetObject("calendario-de-fechas", resourceCulture);
@@ -83,9 +103,59 @@ namespace PlannerMate_empleados.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Byte[].
         /// </summary>
+        internal static byte[] editar {
+            get {
+                object obj = ResourceManager.GetObject("editar", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] flecha_derecha {
+            get {
+                object obj = ResourceManager.GetObject("flecha-derecha", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] flecha_izquierda {
+            get {
+                object obj = ResourceManager.GetObject("flecha-izquierda", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] hombre {
+            get {
+                object obj = ResourceManager.GetObject("hombre", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
         internal static byte[] lapiz {
             get {
                 object obj = ResourceManager.GetObject("lapiz", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] mujer {
+            get {
+                object obj = ResourceManager.GetObject("mujer", resourceCulture);
                 return ((byte[])(obj));
             }
         }

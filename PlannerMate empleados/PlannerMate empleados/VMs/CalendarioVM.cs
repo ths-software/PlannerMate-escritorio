@@ -72,22 +72,10 @@ namespace PlannerMate_empleados.VMs
             SelectDayCommand = new RelayCommand<Day>(SelectDay);
             Days = new ObservableCollection<Day>();
 
-            //IniciarCalendario();
-            //SetCalendario();
             DisplayedDate = DateTime.Today; // cambiamos el DisplayerDate por ello se ejecuta iniciarCalendario
 
             AdelantarMesCommand = new RelayCommand(AdelantarMes);
             AtrasarMesCommand = new RelayCommand(AtrasarMes);
-
-
-
-
-            //WeakReferenceMessenger.Default.Reset();
-
-            //WeakReferenceMessenger.Default.Register<CalendarioVM, DiaSeleccionadoRequest>(this, (r, m) =>
-            //{
-            //    m.Reply(r.DiaSeleccionado);
-            //});
 
         }
 

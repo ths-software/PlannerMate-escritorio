@@ -21,7 +21,7 @@
         <Style TargetType="Button">
             <Setter Property="Width" Value="60"></Setter>
             <Setter Property="Height" Value="30"></Setter>
-            <Setter Property="Margin" Value="20,0,20,0"></Setter>
+            <Setter Property="Margin" Value="5,0,20,0"></Setter>
         </Style>
 
         <Style TargetType="TextBox">
@@ -32,20 +32,21 @@
             </Style.Resources>
             <Setter Property="BorderBrush" Value="#FFA4A4A4"></Setter>
             <Setter Property="Height" Value="30"></Setter>
-            <Setter Property="Width" Value="450"></Setter>
+            <Setter Property="Width" Value="660"></Setter>
             <Setter Property="VerticalAlignment" Value="Center"></Setter>
         </Style>
 
     </UserControl.Resources>
 
-    <DockPanel LastChildFill="True" Background="White">
+    <DockPanel LastChildFill="True" Background="#FFCCCCCC" Width="700" Visibility="{Binding Path=Visibilidad}">
         <StackPanel DockPanel.Dock="Top">
-            <TextBlock FontSize="20" Margin="20,0,0,0">
+            <TextBlock FontSize="20" Margin="20,20,0,0">
             <Run Text="Día Seleccionado: "></Run>
             <Run Text="{Binding DiaSeleccionado.DayNumber}"></Run>
+                <Run Text=", editar cita"></Run>
             </TextBlock>
         </StackPanel>
-        <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" HorizontalAlignment="Left"
+        <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" HorizontalAlignment="Right"
                 Height="70">
             <Button Content="Cancelar"></Button>
             <Button Command="{Binding EditarCitaCommand}" Content="Aceptar"></Button>
@@ -83,35 +84,6 @@
             </StackPanel>
         </StackPanel>
 
-        <StackPanel>
-            <TextBlock Margin="20,20,20,18" HorizontalAlignment="Center" FontSize="18">
-                <Run Text="Cita actual: "></Run>
-                <Run Text="cita.nombre"></Run>
-            </TextBlock>
-            
-            <TextBlock Style="{StaticResource textb1}">
-                <Run Text="Nombre: "></Run>
-                <Run Text="test"></Run>
-            </TextBlock>
-            
-            <TextBlock Style="{StaticResource textb1}">
-                <Run Text="Contacto: "></Run>
-                <Run Text="test"></Run>
-            </TextBlock>
-
-            <TextBlock Style="{StaticResource textb1}">
-                <Run Text="Fecha: "></Run>
-                <Run Text="test"></Run>
-            </TextBlock>
-            <TextBlock Style="{StaticResource textb1}">
-                <Run Text="Descripción: "></Run>
-                <Run Text="test"></Run>
-            </TextBlock>
-            <TextBlock Style="{StaticResource textb1}">
-                <Run Text="Peluquer@: "></Run>
-                <Run Text="test"></Run>
-            </TextBlock>
-        </StackPanel>
 
     </DockPanel>
 </UserControl>

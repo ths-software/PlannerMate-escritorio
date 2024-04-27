@@ -4,6 +4,7 @@ using RestSharp;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,6 +32,21 @@ namespace PlannerMate_empleados.Services
 
             request.AddParameter("application/json", data,ParameterType.RequestBody);
             var response = client.Execute(request);
+            return response;
+        }
+
+
+        public RestResponse PutCliente(Cliente cliente)
+        {
+            var client = new RestClient(@"http://localhost:8080/planner/datos");
+            var request = new RestRequest($"clientes", Method.Put);
+            string data = JsonConvert.SerializeObject(cliente);
+            request.AddParameter("application/json", data, ParameterType.RequestBody);
+            var response = client.Execute(request);
+
+            Trace.WriteLine($"cliente request: {response.Content} {response.ErrorException} {response.ErrorMessage}");
+            Trace.WriteLine($"data: {data}");
+
             return response;
         }
 

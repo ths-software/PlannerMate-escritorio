@@ -10,10 +10,13 @@ namespace PlannerMate_empleados.Classes
     public class Cliente
     {
         [Key]
-        public int IdCliente { get; set; }
-        public string Nombre { get; set; }
-        public string Contacto { get; set; }
-        public string Password { get; set; }
+        public int idCliente { get; set; }
+        public string nombre { get; set; }
+        public string contacto { get; set; }
+        public string password { get; set; }
+
+
+
 
     }
 }

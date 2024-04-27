@@ -28,7 +28,7 @@ namespace PlannerMate_empleados.VMs
             {
                 SetProperty(ref contenidoPrincipal, value);
 
-                if (ContenidoPrincipal is GestionDia)
+                if (ContenidoPrincipal is GestionDia || ContenidoPrincipal is ClientesWin)
                 {
                     BotoneraVisibilidad = "Visible";
                 }
@@ -44,20 +44,30 @@ namespace PlannerMate_empleados.VMs
         public string BotoneraVisibilidad
         {
             get => botoneraVisibilidad;
-            set => SetProperty(ref botoneraVisibilidad,value);
+            set => SetProperty(ref botoneraVisibilidad, value);
         }
+
+        private string actualizarBtnVisibilidad;
+        public string ActualizarBtnVisibilidad
+        {
+            get => actualizarBtnVisibilidad;
+            set => SetProperty(ref actualizarBtnVisibilidad, value);
+        }
+
 
         public RelayCommand AbrirCalendario { get; }
 
         public RelayCommand AbrirGestionDia { get; }
 
-        public RelayCommand AbrirAñadirCita { get; }
+        public RelayCommand AbrirAñadir { get; }
 
-        public RelayCommand AbrirEditarCita { get; }
+        public RelayCommand AbrirEditar { get; }
 
-        public RelayCommand AbrirEliminarCita { get; }
+        public RelayCommand AbrirEliminar { get; }
 
-        public RelayCommand AbrirTrabajadores {  get; }
+        public RelayCommand AbrirTrabajadores { get; }
+
+        public RelayCommand AbrirClientes { get; }
 
 
         private Cita citaSeleccionada = new Cita();
@@ -70,22 +80,34 @@ namespace PlannerMate_empleados.VMs
             }
         }
 
-        
+        private Cliente clienteSeleccionado = new Cliente();
+        public Cliente ClienteSeleccionado
+        {
+            get => clienteSeleccionado;
+            set
+            {
+                SetProperty(ref clienteSeleccionado, value);
+            }
+        }
 
-        CitasRESTService cService = new CitasRESTService();
+
+            CitasRESTService citasService = new CitasRESTService();
+        ClientesRESTService clientesRESTService = new ClientesRESTService();
 
         public MainWindowVM()
         {
 
             AbrirCalendario = new RelayCommand(CargarCalendario);
             AbrirGestionDia = new RelayCommand(CargarGestionDia);
-            AbrirAñadirCita = new RelayCommand(CargarAddCita);
-            AbrirEditarCita = new RelayCommand(CargarEditarCita);
-            AbrirEliminarCita = new RelayCommand(EliminarCita);
+
+            AbrirAñadir = new RelayCommand(CargarAddCitaOCliente);
+            AbrirEditar = new RelayCommand(CargarEditarCitaOCliente);
+            AbrirEliminar = new RelayCommand(EliminarCitaOCliente);
+
             AbrirTrabajadores = new RelayCommand(CargarTrabajadores);
+            AbrirClientes = new RelayCommand(CargarClientes);
 
         }
-
 
 
 
@@ -96,56 +118,108 @@ namespace PlannerMate_empleados.VMs
         public void CargarGestionDia()
         {
             ContenidoPrincipal = NavigationServices.LoadGestionDia();
-            
-        }
-        public void CargarAddCita()
-        {
-            ContenidoPrincipal = NavigationServices.LoadAddCita();
-        }
-        public void CargarEditarCita()
-        {
-            ContenidoPrincipal = NavigationServices.LoadEditarCita();
-        }
-        public void EliminarCita()
-        {
 
-            try
+        }
+        public void CargarAddCitaOCliente()
+        {
+            if (ContenidoPrincipal is GestionDia)
             {
-                CitaSeleccionada = WeakReferenceMessenger.Default.Send<CitaSeleccionadaRequest>();
+                ContenidoPrincipal = NavigationServices.LoadAddCita();
+            }
+            else
+            {
+                ContenidoPrincipal = NavigationServices.LoadAddCliente();
+            }
+        }
+        public void CargarEditarCitaOCliente()
+        {
+            if (ContenidoPrincipal is GestionDia)
+            {
+                ContenidoPrincipal = NavigationServices.LoadEditarCita();
+            }
+            else
+            {
+                ContenidoPrincipal = NavigationServices.LoadEditarCliente();
+            }
+        }
+        public void EliminarCitaOCliente()
+        {
 
-                if (CitaSeleccionada != null)
+            if (ContenidoPrincipal is GestionDia)
+            {
+                try
                 {
-                    MessageBoxResult result = MessageBox.Show("¿Estás seguro de que deseas eliminar esta cita?", "Confirmación de eliminación", MessageBoxButton.YesNo, MessageBoxImage.Question);
-                    
+                    CitaSeleccionada = WeakReferenceMessenger.Default.Send<CitaSeleccionadaRequest>();
 
-
-
-                    if (result == MessageBoxResult.Yes)
+                    if (CitaSeleccionada != null)
                     {
-                        cService.DeleteCita(CitaSeleccionada.idCita);
+                        MessageBoxResult result = MessageBox.Show("¿Estás seguro de que deseas eliminar esta cita?", "Confirmación de eliminación", MessageBoxButton.YesNo, MessageBoxImage.Question);
 
-                        MessageBox.Show("Cita Eliminada", "Correcto", MessageBoxButton.OK, MessageBoxImage.Information);
 
-                        ContenidoPrincipal = NavigationServices.LoadCalendario();
+
+
+                        if (result == MessageBoxResult.Yes)
+                        {
+                            citasService.DeleteCita(CitaSeleccionada.idCita);
+
+                            MessageBox.Show("Cita Eliminada", "Correcto", MessageBoxButton.OK, MessageBoxImage.Information);
+
+                            ContenidoPrincipal = NavigationServices.LoadCalendario();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Debes seleccionar una cita primero.");
                     }
                 }
-                else
+                catch
                 {
-                    MessageBox.Show("Debes seleccionar una cita primero.");
+                    MessageBox.Show("Ninguna cita seleccionada u ocurrió un error en el proceso", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             }
-            catch
+            else
             {
-                MessageBox.Show("Ninguna cita seleccionada o ocurrió un error en el proceso","Error",MessageBoxButton.OK,MessageBoxImage.Error);
+                try
+                {
+                    ClienteSeleccionado = WeakReferenceMessenger.Default.Send<ClienteSeleccionadoRequest>();
+                    if (ClienteSeleccionado != null)
+                    {
+                        MessageBoxResult result = MessageBox.Show("¿Estás seguro de que deseas eliminar este cliente?", "Confirmación de eliminación", MessageBoxButton.YesNo, MessageBoxImage.Question);
+
+                        if (result == MessageBoxResult.Yes)
+                        {
+                            clientesRESTService.DeleteCliente(ClienteSeleccionado.idCliente);
+
+                            MessageBox.Show("Cliente Eliminado", "Correcto", MessageBoxButton.OK, MessageBoxImage.Information);
+
+                            ContenidoPrincipal = NavigationServices.LoadCalendario();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Debes seleccionar un cliente primero.");
+                        }
+
+
+                    }
+                }
+                catch
+                {
+                    MessageBox.Show("Ningún cliente seleccionado u ocurrió un error en el proceso", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
             }
 
-            
+
         }
 
 
         public void CargarTrabajadores()
         {
             ContenidoPrincipal = NavigationServices.LoadTrabajadores();
+        }
+
+        public void CargarClientes()
+        {
+            ContenidoPrincipal = NavigationServices.LoadClientes();
         }
     }
 }

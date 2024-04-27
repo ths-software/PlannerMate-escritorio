@@ -58,33 +58,32 @@ namespace PlannerMate_empleados.VMs
 
             try
             {
-                DiaSeleccionado = WeakReferenceMessenger.Default.Send<DiaSeleccionadoRequest>(); // si no hago click en un dia, se rompe 
-            } // como que no manda un mensaje y esto no recibe nada
-            catch { }
+                DiaSeleccionado = WeakReferenceMessenger.Default.Send<DiaSeleccionadoRequest>();
 
-
-
-            if (DiaSeleccionado != null)
-            {
-                var citasPorTrabajador = DiaSeleccionado.Citas.GroupBy(cita => cita.trabajador);
-                // Seleccionamos solo los trabajadores únicos
-                var trabajadoresUnicos = DiaSeleccionado.Citas.Select(cita => cita.trabajador).Distinct();
-
-                // Para cada trabajador único, obtenemos sus citas y creamos instancias de TrabajadorConCitas
-                var citasAgrupadas = trabajadoresUnicos.Select(trabajador =>
+                if (DiaSeleccionado != null)
                 {
-                    var citasTrabajador = DiaSeleccionado.Citas.Where(cita => cita.trabajador.Equals(trabajador));
-                    return new Trabajador
+                    var citasPorTrabajador = DiaSeleccionado.Citas.GroupBy(cita => cita.trabajador);
+                    // Seleccionamos solo los trabajadores únicos
+                    var trabajadoresUnicos = DiaSeleccionado.Citas.Select(cita => cita.trabajador).Distinct();
+
+                    // Para cada trabajador único, obtenemos sus citas y creamos instancias de TrabajadorConCitas
+                    var citasAgrupadas = trabajadoresUnicos.Select(trabajador =>
                     {
-                        nombre = trabajador.nombre,
-                        Citas = new ObservableCollection<Cita>(citasTrabajador)
-                    };
-                });
+                        var citasTrabajador = DiaSeleccionado.Citas.Where(cita => cita.trabajador.Equals(trabajador));
+                        return new Trabajador
+                        {
+                            nombre = trabajador.nombre,
+                            Citas = new ObservableCollection<Cita>(citasTrabajador)
+                        };
+                    });
 
-                // Creamos la lista de trabajadores con citas
-                TrabajadoresConCitas = new ObservableCollection<Trabajador>(citasAgrupadas);
-
-
+                    // Creamos la lista de trabajadores con citas
+                    TrabajadoresConCitas = new ObservableCollection<Trabajador>(citasAgrupadas);
+                }
+            }
+            catch { 
+            
+            
             }
         }
 

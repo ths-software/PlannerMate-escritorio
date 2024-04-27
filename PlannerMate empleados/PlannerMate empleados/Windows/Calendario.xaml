@@ -76,9 +76,18 @@
             <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                 <TextBlock Width="300" Margin="0,0,10,0" TextAlignment="Center" VerticalAlignment="Center" Text="{Binding DisplayedMonthYear}" FontSize="30" />
                 
-                <Button Command="{Binding Path=AtrasarMesCommand}" Content="&lt;" Height="25" Width="25"></Button>
-                
-                <Button Command="{Binding Path=AdelantarMesCommand}" Content=">" Height="25" Width="25"></Button>
+                <Button Command="{Binding Path=AtrasarMesCommand}" Height="30" Background="Transparent"
+                        BorderThickness="0" Margin="0,0,20,0">
+                    <Image Source="/Resources/flecha-izquierda.png">
+                    </Image>
+                </Button>
+
+                <Button Command="{Binding Path=AdelantarMesCommand}" Height="30
+                        " Background="Transparent"
+                        BorderThickness="0">
+                    <Image Source="/Resources/flecha-derecha.png">
+                    </Image>
+                </Button>
             </StackPanel>
         </Border>
 

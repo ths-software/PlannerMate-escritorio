@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PlannerMate_empleados.Windows"
              mc:Ignorable="d" 
-             d:DesignHeight="600" d:DesignWidth="600">
+             d:DesignHeight="500" d:DesignWidth="800">
 
     <UserControl.Resources>
 
@@ -17,7 +17,7 @@
         <Style TargetType="Button">
             <Setter Property="Width" Value="60"></Setter>
             <Setter Property="Height" Value="30"></Setter>
-            <Setter Property="Margin" Value="0,0,20,0"></Setter>
+            <Setter Property="Margin" Value="5,0,20,0"></Setter>
         </Style>
 
         <Style TargetType="TextBox">
@@ -28,17 +28,18 @@
             </Style.Resources>
             <Setter Property="BorderBrush" Value="#FFA4A4A4"></Setter>
             <Setter Property="Height" Value="30"></Setter>
-            <Setter Property="Width" Value="500"></Setter>
+            <Setter Property="Width" Value="660"></Setter>
             <Setter Property="VerticalAlignment" Value="Center"></Setter>
         </Style>
 
     </UserControl.Resources>
-    
-    <DockPanel LastChildFill="True" Background="White">
+
+    <DockPanel LastChildFill="True" Background="#FFCCCCCC" Width="700" Visibility="{Binding Path=Visibilidad}">
         <StackPanel DockPanel.Dock="Top">
-            <TextBlock FontSize="20" Margin="20,0,0,0">
+            <TextBlock FontSize="20" Margin="20,20,0,0">
                 <Run Text="Día Seleccionado: "></Run>
                 <Run Text="{Binding DiaSeleccionado.DayNumber}"></Run>
+                <Run Text=", añadir cita"></Run>
             </TextBlock>
         </StackPanel>
         <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" HorizontalAlignment="Right"

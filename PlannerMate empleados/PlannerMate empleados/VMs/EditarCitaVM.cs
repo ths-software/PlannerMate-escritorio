@@ -21,15 +21,31 @@ namespace PlannerMate_empleados.VMs
         private Day diaSeleccionado;
         public Day DiaSeleccionado
         {
-            get => diaSeleccionado;
-            set => SetProperty(ref diaSeleccionado, value);
+            get
+            {
+                return diaSeleccionado;
+            }
+            set
+            {
+                SetProperty(ref diaSeleccionado, value);
+            }
         }
 
-        private Cita citaToEdit = new Cita();
+        private Cita citaToEdit;
         public Cita CitaToEdit
         {
             get => citaToEdit;
-            set => SetProperty(ref citaToEdit, value);
+            set
+            {
+                SetProperty(ref citaToEdit, value);
+            }
+        }
+
+        private string visibilidad = "Visible";
+        public string Visibilidad
+        {
+            get => visibilidad;
+            set => SetProperty(ref visibilidad, value);
         }
 
         private string horaToAdd;
@@ -67,6 +83,8 @@ namespace PlannerMate_empleados.VMs
 
         public EditarCitaVM()
         {
+
+
             tRestService = new TrabajadoresRESTService();
             TrabajadoresRest = tRestService.GetTrabajadores();
 
@@ -74,9 +92,11 @@ namespace PlannerMate_empleados.VMs
             {
                 CitaToEdit = WeakReferenceMessenger.Default.Send<CitaSeleccionadaRequest>();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Ha ocurrido un error al obtener la cita seleccionada. Detalles del error: " + ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                Visibilidad = "Collapsed";
+                return;
             }
 
             if (DiaSeleccionado == null)
@@ -88,10 +108,11 @@ namespace PlannerMate_empleados.VMs
                 catch (Exception ex)
                 {
                     MessageBox.Show("Ha ocurrido un error al obtener el día seleccionado. Detalles del error: " + ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    Visibilidad = "Collapsed";
+                    return;
                 }
             }
             EditarCitaCommand = new RelayCommand(UpdateCita);
-
         }
 
         private void ValidarHora()
