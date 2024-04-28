@@ -20,7 +20,7 @@ namespace PlannerMate_empleados.Services
         // considerar hacer esta funcion asincrona para evitar bloqueos
         public ObservableCollection<Cita> GetCitas()
         {
-            var client = new RestClient(@"http://localhost:8080/planner/datos");
+            var client = new RestClient(@"http://plannermate.westeurope.cloudapp.azure.com:8080/PlannerAPIRest/datos");
             var request = new RestRequest("citas",Method.Get); // podria hacer un try catch para capturar que este online o no
             string contentWithoutTimeZone = "";
 
@@ -46,7 +46,7 @@ namespace PlannerMate_empleados.Services
 
         public RestResponse PostCita(Cita cita)
         {
-            var client = new RestClient(@"http://localhost:8080/planner/datos");
+            var client = new RestClient(@"http://plannermate.westeurope.cloudapp.azure.com:8080/datos");
             var request = new RestRequest("citas", Method.Post);
             string data = JsonConvert.SerializeObject(cita);
 
@@ -62,7 +62,7 @@ namespace PlannerMate_empleados.Services
 
         public RestResponse PutCita(Cita cita)
         {
-            var client = new RestClient(@"http://localhost:8080/planner/datos");
+            var client = new RestClient(@"http://plannermate.westeurope.cloudapp.azure.com:8080/datos");
             var request = new RestRequest($"citas", Method.Put);
             string data = JsonConvert.SerializeObject(cita);
             request.AddParameter ("application/json",data,ParameterType.RequestBody);
@@ -77,7 +77,7 @@ namespace PlannerMate_empleados.Services
 
         public RestResponse DeleteCita(int id)
         {
-            var cita = new RestClient(@"http://localhost:8080/planner/datos");
+            var cita = new RestClient(@"http://plannermate.westeurope.cloudapp.azure.com:8080/datos");
             var request = new RestRequest($"citas/{id}", Method.Delete);
             var response = cita.Execute(request);
 

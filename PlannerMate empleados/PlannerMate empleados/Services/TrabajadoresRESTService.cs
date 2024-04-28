@@ -16,7 +16,7 @@ namespace PlannerMate_empleados.Services
 
         public ObservableCollection<Trabajador> GetTrabajadores()
         {
-            var client = new RestClient(@"http://localhost:8080/planner/datos");
+            var client = new RestClient(@"http://plannermate.westeurope.cloudapp.azure.com:8080/datos");
             var request = new RestRequest("trabajadores", Method.Get); // podria hacer un try catch para capturar que este online o no
 
 
