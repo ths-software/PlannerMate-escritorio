@@ -26,7 +26,7 @@ namespace PlannerMate_empleados.Services
 
         public RestResponse PostCliente(Cliente cliente)
         {
-            var client = new RestClient(@"http://plannermate.westeurope.cloudapp.azure.com:8080/datos");
+            var client = new RestClient(@"http://plannermate.westeurope.cloudapp.azure.com:8080/PlannerAPIRest/datos");
             var request = new RestRequest("clientes", Method.Post);
             string data = JsonConvert.SerializeObject(cliente);
 
@@ -38,7 +38,7 @@ namespace PlannerMate_empleados.Services
 
         public RestResponse PutCliente(Cliente cliente)
         {
-            var client = new RestClient(@"http://plannermate.westeurope.cloudapp.azure.com:8080/datos");
+            var client = new RestClient(@"http://plannermate.westeurope.cloudapp.azure.com:8080/PlannerAPIRest/datos");
             var request = new RestRequest($"clientes", Method.Put);
             string data = JsonConvert.SerializeObject(cliente);
             request.AddParameter("application/json", data, ParameterType.RequestBody);
@@ -52,7 +52,7 @@ namespace PlannerMate_empleados.Services
 
         public RestResponse DeleteCliente(int id)
         {
-            var cita = new RestClient(@"http://plannermate.westeurope.cloudapp.azure.com:8080/datos");
+            var cita = new RestClient(@"http://plannermate.westeurope.cloudapp.azure.com:8080/PlannerAPIRest/datos");
             var request = new RestRequest($"clientes/{id}", Method.Delete);
             var response = cita.Execute(request);
 

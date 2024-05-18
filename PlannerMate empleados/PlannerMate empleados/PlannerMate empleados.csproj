@@ -6,6 +6,7 @@
     <RootNamespace>PlannerMate_empleados</RootNamespace>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>Resources\logo.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -18,6 +19,7 @@
     <None Remove="Resources\flecha-izquierda.png" />
     <None Remove="Resources\hombre.png" />
     <None Remove="Resources\lapiz.png" />
+    <None Remove="Resources\logo.ico" />
     <None Remove="Resources\mujer.png" />
     <None Remove="Resources\perfil.png" />
     <None Remove="Resources\ruleta.png" />
@@ -40,6 +42,7 @@
     <Resource Include="Resources\flecha-izquierda.png" />
     <Resource Include="Resources\hombre.png" />
     <Resource Include="Resources\lapiz.png" />
+    <Resource Include="Resources\logo.ico" />
     <Resource Include="Resources\mujer.png" />
     <Resource Include="Resources\perfil.png" />
     <Resource Include="Resources\ruleta.png" />
@@ -52,6 +55,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
@@ -59,6 +67,13 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
 
 </Project>
