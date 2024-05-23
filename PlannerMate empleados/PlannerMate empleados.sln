@@ -5,6 +5,8 @@ VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlannerMate empleados", "PlannerMate empleados\PlannerMate empleados.csproj", "{4E6EE38E-9241-4A3B-8B5C-5AB1C6BF746B}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "PlannerMate", "PlannerMate\PlannerMate.vdproj", "{FEDE67E9-89E0-447A-A962-3892813DE9EE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,8 @@ Global
 		{4E6EE38E-9241-4A3B-8B5C-5AB1C6BF746B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E6EE38E-9241-4A3B-8B5C-5AB1C6BF746B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E6EE38E-9241-4A3B-8B5C-5AB1C6BF746B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEDE67E9-89E0-447A-A962-3892813DE9EE}.Debug|Any CPU.ActiveCfg = Debug
+		{FEDE67E9-89E0-447A-A962-3892813DE9EE}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

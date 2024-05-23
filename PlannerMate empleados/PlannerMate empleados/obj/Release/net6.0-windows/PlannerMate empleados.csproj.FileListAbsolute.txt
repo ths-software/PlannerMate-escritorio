@@ -1,0 +1,47 @@
+C:\Users\andun\Documents\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\bin\Release\net6.0-windows\PlannerMate empleados.exe
+C:\Users\andun\Documents\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\bin\Release\net6.0-windows\PlannerMate empleados.deps.json
+C:\Users\andun\Documents\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\bin\Release\net6.0-windows\PlannerMate empleados.runtimeconfig.json
+C:\Users\andun\Documents\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\bin\Release\net6.0-windows\PlannerMate empleados.dll
+C:\Users\andun\Documents\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\bin\Release\net6.0-windows\PlannerMate empleados.pdb
+C:\Users\andun\Documents\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\bin\Release\net6.0-windows\CommunityToolkit.Mvvm.dll
+C:\Users\andun\Documents\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\bin\Release\net6.0-windows\Newtonsoft.Json.dll
+C:\Users\andun\Documents\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\bin\Release\net6.0-windows\RestSharp.dll
+C:\Users\andun\Documents\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\bin\Release\net6.0-windows\System.Text.Encodings.Web.dll
+C:\Users\andun\Documents\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\bin\Release\net6.0-windows\System.Text.Json.dll
+C:\Users\andun\Documents\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\bin\Release\net6.0-windows\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+C:\Users\andun\Documents\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Release\net6.0-windows\PlannerMate empleados.csproj.AssemblyReference.cache
+C:\Users\andun\Documents\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Release\net6.0-windows\MainWindow.g.cs
+C:\Users\andun\Documents\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Release\net6.0-windows\Windows\AddCitaWin.g.cs
+C:\Users\andun\Documents\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Release\net6.0-windows\Windows\AddClienteWin.g.cs
+C:\Users\andun\Documents\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Release\net6.0-windows\Windows\Calendario.g.cs
+C:\Users\andun\Documents\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Release\net6.0-windows\Windows\ClientesWin.g.cs
+C:\Users\andun\Documents\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Release\net6.0-windows\Windows\EditarCitaWin.g.cs
+C:\Users\andun\Documents\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Release\net6.0-windows\Windows\EditarClienteWin.g.cs
+C:\Users\andun\Documents\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Release\net6.0-windows\Windows\GestionDia.g.cs
+C:\Users\andun\Documents\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Release\net6.0-windows\Windows\TrabajadoresWin.g.cs
+C:\Users\andun\Documents\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Release\net6.0-windows\App.g.cs
+C:\Users\andun\Documents\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Release\net6.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\andun\Documents\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Release\net6.0-windows\PlannerMate empleados_MarkupCompile.cache
+C:\Users\andun\Documents\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Release\net6.0-windows\PlannerMate empleados_MarkupCompile.lref
+C:\Users\andun\Documents\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Release\net6.0-windows\MainWindow.baml
+C:\Users\andun\Documents\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Release\net6.0-windows\Windows\AddCitaWin.baml
+C:\Users\andun\Documents\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Release\net6.0-windows\Windows\AddClienteWin.baml
+C:\Users\andun\Documents\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Release\net6.0-windows\Windows\Calendario.baml
+C:\Users\andun\Documents\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Release\net6.0-windows\Windows\ClientesWin.baml
+C:\Users\andun\Documents\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Release\net6.0-windows\Windows\EditarCitaWin.baml
+C:\Users\andun\Documents\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Release\net6.0-windows\Windows\EditarClienteWin.baml
+C:\Users\andun\Documents\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Release\net6.0-windows\Windows\GestionDia.baml
+C:\Users\andun\Documents\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Release\net6.0-windows\Windows\TrabajadoresWin.baml
+C:\Users\andun\Documents\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Release\net6.0-windows\PlannerMate empleados.g.resources
+C:\Users\andun\Documents\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Release\net6.0-windows\PlannerMate_empleados.Properties.Resources.resources
+C:\Users\andun\Documents\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Release\net6.0-windows\PlannerMate empleados.csproj.GenerateResource.cache
+C:\Users\andun\Documents\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Release\net6.0-windows\PlannerMate empleados.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\andun\Documents\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Release\net6.0-windows\PlannerMate empleados.AssemblyInfoInputs.cache
+C:\Users\andun\Documents\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Release\net6.0-windows\PlannerMate empleados.AssemblyInfo.cs
+C:\Users\andun\Documents\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Release\net6.0-windows\PlannerMate empleados.csproj.CoreCompileInputs.cache
+C:\Users\andun\Documents\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Release\net6.0-windows\PlannerMate empleados.csproj.CopyComplete
+C:\Users\andun\Documents\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Release\net6.0-windows\PlannerMate empleados.dll
+C:\Users\andun\Documents\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Release\net6.0-windows\refint\PlannerMate empleados.dll
+C:\Users\andun\Documents\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Release\net6.0-windows\PlannerMate empleados.pdb
+C:\Users\andun\Documents\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Release\net6.0-windows\PlannerMate empleados.genruntimeconfig.cache
+C:\Users\andun\Documents\X.Proyecto Final\DAM-ProyectoFinal-Desktop\PlannerMate empleados\PlannerMate empleados\obj\Release\net6.0-windows\ref\PlannerMate empleados.dll
