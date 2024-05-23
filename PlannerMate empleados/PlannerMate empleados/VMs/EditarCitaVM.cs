@@ -127,7 +127,6 @@ namespace PlannerMate_empleados.VMs
 
                 DateTime fechaActual = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, tmi);
                 bool esHorarioVerano = tmi.IsDaylightSavingTime(fechaActual);
-                int ajusteHora = esHorarioVerano ? 2 : 1;
 
                 fechaConHora = new DateTime(DiaSeleccionado.Date.Year, DiaSeleccionado.Date.Month, DiaSeleccionado.Date.Day,
                                                      hora.Hour, hora.Minute, hora.Second);
