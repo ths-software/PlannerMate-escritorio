@@ -142,7 +142,7 @@ namespace PlannerMate_empleados.VMs
         {
             CitaToEdit.fecha = FechaConHora;
 
-            if (CitaToEdit.trabajador == null)
+            if (CitaToEdit.trabajador != null)
             {
                 CitaToEdit.trabajador = TrabajadorSeleccionado;
 
@@ -151,7 +151,7 @@ namespace PlannerMate_empleados.VMs
                 Trace.WriteLine($"Asignado trabajador: {CitaToEdit.trabajador}");
             }
 
-            if (string.IsNullOrEmpty(CitaToEdit.nombre) || CitaToEdit.trabajador == null) //Trabajador a añadir
+            else if (string.IsNullOrEmpty(CitaToEdit.nombre) || CitaToEdit.trabajador == null) //Trabajador a añadir
             {
                 MessageBox.Show("El campo nombre o trabajador seleccionado están vacíos", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
